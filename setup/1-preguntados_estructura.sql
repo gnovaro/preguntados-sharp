@@ -19,10 +19,12 @@ CREATE TABLE usuario
 	nombre varchar(50),
 	email varchar(254),
 	fecha_nac date,
-	idoma_id int,
+	idioma_id int,
 	puntos int DEFAULT 0,
 	contrasena varchar(80)
 );
+
+INSERT INTO usuario(id,nombre,email,fecha_nac,idioma_id,contrasena) VALUES(1,'Admin','grupo1@esba.com.ar',1,sha1('4dm1n%'));
 
 CREATE TABLE categoria
 (
