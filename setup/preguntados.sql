@@ -10,7 +10,7 @@ CREATE TABLE idioma
 	nombre varchar(50),
 );
 
-INSERT INTO idioma (id,nombre) VALUES(1,'Espa�ol');
+INSERT INTO idioma (id,nombre) VALUES(1,'Español');
 INSERT INTO idioma (id,nombre) VALUES(2,'Ingles');
 
 CREATE TABLE usuario
@@ -31,6 +31,20 @@ CREATE TABLE categoria
 	idioma_id int
 );
 
+-- Categorias Español
+INSERT INTO categoria(id,nombre,idioma_id) VALUES(1,'Películas',1);
+INSERT INTO categoria(id,nombre,idioma_id) VALUES(2,'Música',1);
+INSERT INTO categoria(id,nombre,idioma_id) VALUES(3,'Personajes de ficción',1);
+INSERT INTO categoria(id,nombre,idioma_id) VALUES(4,'Video Juegos',1);
+INSERT INTO categoria(id,nombre,idioma_id) VALUES(5,'Libros',1);
+
+-- Categorias Ingles
+INSERT INTO categoria(id,nombre,idioma_id) VALUES(10,'Movies',2);
+INSERT INTO categoria(id,nombre,idioma_id) VALUES(11,'Music',2);
+INSERT INTO categoria(id,nombre,idioma_id) VALUES(12,'Fictional characters',2);
+INSERT INTO categoria(id,nombre,idioma_id) VALUES(13,'Videogames',1);
+INSERT INTO categoria(id,nombre,idioma_id) VALUES(14,'Books',1);
+
 CREATE TABLE pregunta
 (
 	id int,
@@ -41,7 +55,8 @@ CREATE TABLE pregunta
 	votos_positivos int default 0,
 	votos_negativos int default 0,
 	usuario_id int, --CREADOR pregunta
-	estado int DEFAULT 1
+	denunciada smallint DEFAULT 0,
+	estado int DEFAULT 1	
 );
 
 CREATE TABLE pregunta_opcion
