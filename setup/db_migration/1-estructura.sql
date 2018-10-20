@@ -2,7 +2,7 @@
  * Preguntados ESTRUCTURA SQL
  * ESBA
  * GRUPO 1: Novaro, Sumi, Guido, Rodriguez
- * @version: 1.0.3
+ * @version: 1.0.4
  */
 CREATE DATABASE preguntados;
 
@@ -131,4 +131,17 @@ CREATE TABLE respuesta
 );
 
 -- Creamos LA PK sobre la columna id
-ALTER TABLE respuesta ADD CONSTRAINT PK_respuesta PRIMARY KEY (id); 
+ALTER TABLE respuesta ADD CONSTRAINT PK_respuesta PRIMARY KEY (id);
+																	   
+-- Creamos Foreign Key FK_pregunta_categoria
+ALTER TABLE pregunta ADD CONSTRAINT FK_pregunta_categoria FOREIGN KEY
+(categoria_id) REFERENCES dbo.categoria
+(id) ON UPDATE  NO ACTION 
+ ON DELETE  NO ACTION; 
+
+-- Creamos Foreign key FK_pregunta_idioma
+ALTER TABLE pregunta ADD CONSTRAINT FK_pregunta_idioma FOREIGN KEY
+(idioma_id) REFERENCES dbo.idioma
+(id) ON UPDATE  NO ACTION 
+ON DELETE  NO ACTION;
+																	   
