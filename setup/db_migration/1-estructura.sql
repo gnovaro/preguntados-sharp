@@ -2,7 +2,7 @@
  * Preguntados ESTRUCTURA SQL
  * ESBA
  * GRUPO 1: Novaro, Sumi, Guido, Rodriguez
- * @version: 1.0.1
+ * @version: 1.0.3
  */
 CREATE DATABASE preguntados;
 
@@ -32,7 +32,7 @@ SET IDENTITY_INSERT idioma OFF;
 -- Creamos tabla usuario
 CREATE TABLE usuario
 (
-	id int NOT NULL IDENTITY(1,1),
+	id bigint NOT NULL IDENTITY(1,1),
 	nombre varchar(50) NOT NULL,
 	email varchar(254) NULL,
 	fecha_nac date NULL,
@@ -47,7 +47,11 @@ ALTER TABLE usuario ADD CONSTRAINT PK_usuario PRIMARY KEY (id);
 --Deshabilitamos el autoicremental temporalmente
 SET IDENTITY_INSERT usuario ON;
 
--- Insertamos un usuario por defecto Admin con la contraseña: 4dm1n% con el salt '3$B4' contatenado al final del password y hasheado en sha256
+/**
+ * Insertamos un usuario por defecto Admin 
+ * Con la contraseña: 4dm1n% con el salt '3$B4' 
+  * Concatenado al final del password y hasheado el resultado de la concatenacion en sha256
+*/
 INSERT INTO usuario(id,nombre,email,idioma_id,contrasena) 
 VALUES(1,'Admin','grupo1@esba.com.ar',1,HASHBYTES('SHA2_256',CONCAT_WS('','4dm1n%','3$B4')));
 
@@ -58,65 +62,73 @@ SET IDENTITY_INSERT usuario OFF;
 CREATE TABLE categoria
 (
 	id int NOT NULL IDENTITY(1,1),
+	idioma_id int NOT NULL,
 	nombre varchar(50) NOT NULL,
-	idioma_id int NOT NULL
+	estado smallint NOT NULL DEFAULT 1
 );
 
 -- Creamos LA PK sobre la columna id
 ALTER TABLE categoria ADD CONSTRAINT PK_categoria PRIMARY KEY (id); 
 
-
 --Deshabilitamos el autoicremental temporalmente
 SET IDENTITY_INSERT categoria ON;
 
 -- Categorias Español
-INSERT INTO categoria(id,nombre,idioma_id) VALUES(1,'Películas',1);
-INSERT INTO categoria(id,nombre,idioma_id) VALUES(2,'Música',1);
-INSERT INTO categoria(id,nombre,idioma_id) VALUES(3,'Personajes de ficción',1);
-INSERT INTO categoria(id,nombre,idioma_id) VALUES(4,'Video Juegos',1);
-INSERT INTO categoria(id,nombre,idioma_id) VALUES(5,'Libros',1);
+INSERT INTO categoria(id,idioma_id,nombre) VALUES(1,1,'Películas');
+INSERT INTO categoria(id,idioma_id,nombre) VALUES(2,1,'Música');
+INSERT INTO categoria(id,idioma_id,nombre) VALUES(3,1,'Personajes de ficción');
+INSERT INTO categoria(id,idioma_id,nombre) VALUES(4,1,'Video Juegos');
+INSERT INTO categoria(id,idioma_id,nombre) VALUES(5,1,'Libros');
 
 -- Categorias Ingles
-INSERT INTO categoria(id,nombre,idioma_id) VALUES(10,'Movies',2);
-INSERT INTO categoria(id,nombre,idioma_id) VALUES(11,'Music',2);
-INSERT INTO categoria(id,nombre,idioma_id) VALUES(12,'Fictional characters',2);
-INSERT INTO categoria(id,nombre,idioma_id) VALUES(13,'Videogames',1);
-INSERT INTO categoria(id,nombre,idioma_id) VALUES(14,'Books',1);
+INSERT INTO categoria(id,idioma_id,nombre) VALUES(10,2,'Movies');
+INSERT INTO categoria(id,idioma_id,nombre) VALUES(11,2,'Music');
+INSERT INTO categoria(id,idioma_id,nombre) VALUES(12,2,'Fictional characters');
+INSERT INTO categoria(id,idioma_id,nombre) VALUES(13,2,'Videogames');
+INSERT INTO categoria(id,idioma_id,nombre) VALUES(14,2,'Books');
 
 --habilitamos el autoicremental nuevamente
 SET IDENTITY_INSERT categoria OFF;
 
-
+-- Creamos la tabla pregunta
 CREATE TABLE pregunta
 (
-	id int NOT NULL IDENTITY(1,1),
+	id bigint NOT NULL IDENTITY(1,1),
 	idioma_id int NOT NULL,
 	categoria_id int NOT NULL,
 	descripcion varchar(100) NOT NULL,
-	opcion_id_correcta int NOT NULL,
-	votos_positivos int NOT NULL default 0,
-	votos_negativos int NOT NULL default 0,
-	usuario_id int NOT NULL, --CREADOR pregunta
+	opcion_id_correcta bigint NOT NULL,
+	votos_positivos bigint NOT NULL default 0,
+	votos_negativos bigint NOT NULL default 0,
+	usuario_id bigint NOT NULL, --CREADOR pregunta
 	denunciada smallint NOT NULL DEFAULT 0,
 	estado smallint NOT NULL DEFAULT 1
 );
 
--- TODO: Revisar el resto
+-- Creamos LA PK sobre la columna id
+ALTER TABLE pregunta ADD CONSTRAINT PK_pregunta PRIMARY KEY (id); 
 
+-- Creamos tabla
 CREATE TABLE pregunta_opcion
 (
-	id INT,
-	pregunta_id INT,
-	descripcion_opcion varchar(50),
+	id bigint NOT NULL IDENTITY(1,1),
+	pregunta_id bigint NOT NULL,
+	descripcion_opcion varchar(80),
 	correcta smallint default 0
 );
 
+-- Creamos LA PK sobre la columna id
+ALTER TABLE pregunta_opcion ADD CONSTRAINT PK_pregunta_opcion PRIMARY KEY (id); 
+
+-- Creamos tabla respuesta
 CREATE TABLE respuesta
 (
-	id int,
-	usuario_id int,
-	pregunta_id int,
-	pregunta_opcion_id int,
+	id bigint NOT NULL IDENTITY(1,1),
+	usuario_id bigint NOT NULL,
+	pregunta_id bigint  NOT NULL,
+	pregunta_opcion_id int  NOT NULL,
 	correctamente smallint
 );
 
+-- Creamos LA PK sobre la columna id
+ALTER TABLE respuesta ADD CONSTRAINT PK_respuesta PRIMARY KEY (id); 
