@@ -2,7 +2,7 @@
  * Preguntados ESTRUCTURA SQL
  * ESBA
  * GRUPO 1: Novaro, Sumi, Guido, Rodriguez
- * @version: 1.0.5
+ * @version: 1.0.6
  */
 -- Creamos la base de datos
 CREATE DATABASE preguntados;
@@ -19,7 +19,9 @@ CREATE TABLE idioma
 );
 
 -- Creamos LA PK sobre la columna id
-ALTER TABLE idioma ADD CONSTRAINT PK_idioma PRIMARY KEY (id);
+ALTER TABLE idioma 
+ADD CONSTRAINT PK_idioma 
+PRIMARY KEY (id);
 
 --habilitamos permitir especificar id
 SET IDENTITY_INSERT idioma ON;
@@ -189,3 +191,19 @@ FK_respuesta_pregunta_opcion FOREIGN KEY
 (pregunta_opcion_id) REFERENCES pregunta_opcion
 (id) ON UPDATE  CASCADE 
 	 ON DELETE  NO ACTION;
+
+-- Creamos tabla denuncia
+CREATE TABLE denuncia
+(
+	id int NOT NULL,
+	usuario_id bigint NOT NULL,
+	pregunta_id bigint NOT NULL,
+	descripcion varchar(255) NOT NULL,
+	fecha datetime NOT NULL
+);
+
+-- Se añade la PK a la tabla denuncia
+ALTER TABLE denuncia ADD CONSTRAINT PK_denuncia PRIMARY KEY CLUSTERED(id);
+
+-- Le añado un indicide por fecha
+ALTER TABLE denuncia ADD CONSTRAINT DF_denuncia_fecha DEFAULT GETDATE() FOR fecha;
