@@ -70,7 +70,7 @@
             this.btnRanking.Text = "Ranking";
             this.btnRanking.UseVisualStyleBackColor = true;
             // 
-            // Menu
+            // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -79,8 +79,8 @@
             this.Controls.Add(this.btnPerfil);
             this.Controls.Add(this.btnPreguntaAgregar);
             this.Controls.Add(this.btnJugar);
-            this.Name = "Menu";
-            this.Text = "Menu";
+            this.Name = "MenuPrincipal";
+            this.Text = "Menu Preguntados";
             this.Load += new System.EventHandler(this.Menu_Load);
             this.ResumeLayout(false);
 
