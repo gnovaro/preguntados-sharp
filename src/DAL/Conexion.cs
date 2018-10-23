@@ -14,7 +14,7 @@ namespace DAL
     {
         private SqlConnection objConexion;
         private string strCadenaDeConexion = "";
-
+        protected string DATABASE = "";
 
         /* -------------------- private void Conectar() ------------ 
          * Este metodo como indica su nombre... me permite conectarme con la 
@@ -25,7 +25,9 @@ namespace DAL
         private void Conectar()
         {
             //strCadenaDeConexion = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=preguntados;Data Source=.\\INSTANCIA_2012";
-            strCadenaDeConexion = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=preguntados;Data Source=.";
+            //strCadenaDeConexion = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=preguntados;Data Source=.";
+
+            strCadenaDeConexion = "Data Source = localhost; Initial Catalog = preguntados; Integrated Security = True; MultipleActiveResultSets = True";
 
             //Instanció un objeto del tipo SqlConnection
             objConexion = new SqlConnection();

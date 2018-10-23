@@ -42,6 +42,7 @@
             this.btnJugar.TabIndex = 0;
             this.btnJugar.Text = "Jugar";
             this.btnJugar.UseVisualStyleBackColor = true;
+            this.btnJugar.Click += new System.EventHandler(this.btnJugar_Click);
             // 
             // btnPreguntaAgregar
             // 

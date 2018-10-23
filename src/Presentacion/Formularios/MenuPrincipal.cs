@@ -34,5 +34,11 @@ namespace Presentacion.Formularios
                 btnJugar.Text = "Play";
             }                                
         }
+
+        private void btnJugar_Click(object sender, EventArgs e)
+        {
+            Juego frmJuego = new Juego(this._usuario);
+            frmJuego.Show();
+        }
     }
 }

@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\Juego.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Juego.Designer.cs">
+      <DependentUpon>Juego.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\MenuPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Juego.resx">
+      <DependentUpon>Juego.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
