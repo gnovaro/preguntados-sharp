@@ -138,7 +138,10 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
-    <value>1</value>
+    <value>3</value>
+  </data>
+  <data name="txtPregunta.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 12pt</value>
   </data>
   <data name="txtPregunta.Location" type="System.Drawing.Point, System.Drawing">
     <value>236, 99</value>
@@ -152,6 +155,9 @@
   <data name="txtPregunta.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
   </data>
+  <data name="txtPregunta.Text" xml:space="preserve">
+    <value>Texto Pregunta  de prueba</value>
+  </data>
   <data name="&gt;&gt;txtPregunta.Name" xml:space="preserve">
     <value>txtPregunta</value>
   </data>
@@ -162,6 +168,172 @@
     <value>$this</value>
   </data>
   <data name="&gt;&gt;txtPregunta.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radOpcion4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="radOpcion4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radOpcion4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 107</value>
+  </data>
+  <data name="radOpcion4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 21</value>
+  </data>
+  <data name="radOpcion4.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="radOpcion4.Text" xml:space="preserve">
+    <value>radioButton1</value>
+  </data>
+  <data name="&gt;&gt;radOpcion4.Name" xml:space="preserve">
+    <value>radOpcion4</value>
+  </data>
+  <data name="&gt;&gt;radOpcion4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radOpcion4.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;radOpcion4.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="radOpcion3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radOpcion3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radOpcion3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 69</value>
+  </data>
+  <data name="radOpcion3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 21</value>
+  </data>
+  <data name="radOpcion3.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="radOpcion3.Text" xml:space="preserve">
+    <value>radioButton1</value>
+  </data>
+  <data name="&gt;&gt;radOpcion3.Name" xml:space="preserve">
+    <value>radOpcion3</value>
+  </data>
+  <data name="&gt;&gt;radOpcion3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radOpcion3.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;radOpcion3.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="radOpcion2.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radOpcion2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="radOpcion2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 42</value>
+  </data>
+  <data name="radOpcion2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 21</value>
+  </data>
+  <data name="radOpcion2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="radOpcion2.Text" xml:space="preserve">
+    <value>radioButton1</value>
+  </data>
+  <data name="&gt;&gt;radOpcion2.Name" xml:space="preserve">
+    <value>radOpcion2</value>
+  </data>
+  <data name="&gt;&gt;radOpcion2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radOpcion2.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;radOpcion2.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="radOpcion1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="radOpcion1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>33, 15</value>
+  </data>
+  <data name="radOpcion1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>110, 21</value>
+  </data>
+  <data name="radOpcion1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="radOpcion1.Text" xml:space="preserve">
+    <value>radioButton1</value>
+  </data>
+  <data name="&gt;&gt;radOpcion1.Name" xml:space="preserve">
+    <value>radOpcion1</value>
+  </data>
+  <data name="&gt;&gt;radOpcion1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;radOpcion1.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;radOpcion1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>236, 218</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>313, 149</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="btnResponderPregunta.Location" type="System.Drawing.Point, System.Drawing">
+    <value>328, 389</value>
+  </data>
+  <data name="btnResponderPregunta.Size" type="System.Drawing.Size, System.Drawing">
+    <value>117, 49</value>
+  </data>
+  <data name="btnResponderPregunta.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="btnResponderPregunta.Text" xml:space="preserve">
+    <value>Responder</value>
+  </data>
+  <data name="&gt;&gt;btnResponderPregunta.Name" xml:space="preserve">
+    <value>btnResponderPregunta</value>
+  </data>
+  <data name="&gt;&gt;btnResponderPregunta.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;btnResponderPregunta.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;btnResponderPregunta.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
@@ -175,6 +347,12 @@
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Juego</value>
+  </data>
+  <data name="&gt;&gt;timer1.Name" xml:space="preserve">
+    <value>timer1</value>
+  </data>
+  <data name="&gt;&gt;timer1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
     <value>Juego</value>

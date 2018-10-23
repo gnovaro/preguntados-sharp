@@ -49,12 +49,13 @@
             // 
             // btnAceptarIdioma
             // 
-            this.btnAceptarIdioma.Location = new System.Drawing.Point(114, 107);
+            this.btnAceptarIdioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
+            this.btnAceptarIdioma.Location = new System.Drawing.Point(95, 107);
             this.btnAceptarIdioma.Name = "btnAceptarIdioma";
-            this.btnAceptarIdioma.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptarIdioma.Size = new System.Drawing.Size(89, 40);
             this.btnAceptarIdioma.TabIndex = 5;
             this.btnAceptarIdioma.Text = "Aceptar";
-            this.btnAceptarIdioma.UseVisualStyleBackColor = true;
+            this.btnAceptarIdioma.UseVisualStyleBackColor = false;
             this.btnAceptarIdioma.Click += new System.EventHandler(this.btnAceptarIdioma_Click);
             // 
             // radEnglish
