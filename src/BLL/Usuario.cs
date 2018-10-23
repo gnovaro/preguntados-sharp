@@ -8,20 +8,20 @@ namespace BLL
 {
     public class Usuario
     {
-        private int _idiomaId;
+        private Idioma _idioma;
         private int _id;
         private string _nombre;
         private string _email;
         private DateTime _fechanac;
         private int _puntos;
         private string _contrasena;
-        
-        public int idiomaId
+        private List<Pregunta> _preguntas = new List<Pregunta>();
+        public Idioma idioma
         {
-            get { return _idiomaId; }
-            set { _idiomaId = value; }
+            get { return _idioma; }
+            set { _idioma = value; }
         }
-        
+            
         public int id
         {
             get { return _id; }
@@ -58,5 +58,11 @@ namespace BLL
             set { _contrasena = value; }
         }
 
+        public List<Pregunta> preguntas
+        {
+            get { return _preguntas; }
+            set { _preguntas = value; }
+        }
+        
     }
 }

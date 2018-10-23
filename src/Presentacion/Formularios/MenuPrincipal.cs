@@ -29,7 +29,7 @@ namespace Presentacion.Formularios
         private void Menu_Load(object sender, EventArgs e)
         {
             //Ingles
-            if(this._usuario.idiomaId == 2)
+            if(this._usuario.idioma.id == 2)
             {
                 btnJugar.Text = "Play";
             }                                

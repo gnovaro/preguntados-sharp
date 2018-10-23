@@ -29,7 +29,7 @@ namespace Presentacion.Formularios
         private void Juego_Load(object sender, EventArgs e)
         {
             Pregunta preguntaRandom = new BLL.Pregunta();
-            preguntaRandom = preguntaRandom.obtenerPreguntaRandom(this._usuario.idiomaId);
+            preguntaRandom = preguntaRandom.obtenerPreguntaRandom(this._usuario.idioma.id);
             txtPregunta.Text = preguntaRandom.descripcion;
         }
     }

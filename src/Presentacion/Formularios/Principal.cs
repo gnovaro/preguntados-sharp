@@ -29,17 +29,19 @@ namespace Presentacion
 
         private void btnAceptarIdioma_Click(object sender, EventArgs e)
         {
+            Idioma lang = new Idioma();
             if (radEspanol.Checked)
             {
-                this._usuario.idiomaId = 1;
+                lang.id = 1;
             }
 
             if (radEnglish.Checked)
             {
-                this._usuario.idiomaId = 2;
+                lang.id = 2;
+                
             }
+            this._usuario.idioma = lang;
 
-            MessageBox.Show(this._usuario.idiomaId.ToString());
             MenuPrincipal frmMenu = new MenuPrincipal(this._usuario);
             frmMenu.Show();
         }
