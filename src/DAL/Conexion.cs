@@ -221,6 +221,58 @@ namespace DAL
             return filasAfectadas;
         }
 
+        public int EscribiryObtenerValorSP(string pTexto, SqlParameter[] pParametrosSql, string pVariable)
+        {
+            //le paso pvariable que especifica la columna del valor que quiero obtener
+            //Instanció una variable filasAfectadas que va a terminar devolviendo la cantidad de filas afectadas.
+            int filasAfectadas = 0;
+            int valor;
+
+            //Instancio un objeto del tipo SqlCommand
+            var objComando = new SqlCommand();
+
+            //Me conecto...
+            this.Conectar();
+
+            try
+            {
+                objComando.CommandText = pTexto;
+                objComando.CommandType = CommandType.StoredProcedure;
+                objComando.Connection = this.objConexion;
+
+                if (pParametrosSql.Length > 0)
+                {
+                    objComando.Parameters.AddRange(pParametrosSql);
+                    //El método ExecuteNonQuery() me devuelve la cantidad de filas afectadas.
+                    filasAfectadas = objComando.ExecuteNonQuery();
+                    //aca obtengo el valor y lo convierto a int, esta pensado para obtener un id luego de hacer un alta
+                    valor = Convert.ToInt32( objComando.Parameters[pVariable].Value);
+                }
+                else
+                {
+                    //retorno -1 porque la lista de parametros Sql tiene 0 ítems...
+                    filasAfectadas = -1;
+                    valor = filasAfectadas;
+                }
+
+
+
+            }
+            catch (Exception)
+            {
+                filasAfectadas = -1;
+                throw;
+            }
+            finally
+            {
+                //Me desconecto
+                this.Desconectar();
+            }
+
+
+            return valor;
+        }
+
         #region Parametros
         public SqlParameter crearParametro(string pNombre, string pValor)
         {
@@ -286,6 +338,19 @@ namespace DAL
 
             return objParametro;
         }
+
+        public SqlParameter crearParametroDeSalida(string pNombre)
+        {
+
+            SqlParameter objParametro = new SqlParameter();
+
+            objParametro.ParameterName = pNombre;
+            objParametro.DbType = DbType.Int32;
+            objParametro.Direction = System.Data.ParameterDirection.Output;
+
+            return objParametro;
+        }
+
         #endregion
 
 
