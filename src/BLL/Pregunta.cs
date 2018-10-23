@@ -89,9 +89,12 @@ namespace BLL
         {
             //Pregunta preguntaObj = new Pregunta();
             PreguntaDAL pregDal = new DAL.PreguntaDAL();
+            //OpcionDAL opcDal = new DAL.OpcionDAL();
             DataRow row = pregDal.obtenerPreguntaRandom(idiomaId);
             this.id = Convert.ToInt32(row["id"].ToString());
             this.descripcion = row["descripcion"].ToString();
+
+            
             return this;
         }
     }

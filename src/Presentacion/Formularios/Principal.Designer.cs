@@ -28,11 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnAceptarIdioma = new System.Windows.Forms.Button();
             this.radEnglish = new System.Windows.Forms.RadioButton();
             this.radEspanol = new System.Windows.Forms.RadioButton();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -40,7 +43,7 @@
             this.groupBox1.Controls.Add(this.btnAceptarIdioma);
             this.groupBox1.Controls.Add(this.radEnglish);
             this.groupBox1.Controls.Add(this.radEspanol);
-            this.groupBox1.Location = new System.Drawing.Point(221, 76);
+            this.groupBox1.Location = new System.Drawing.Point(300, 94);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(289, 153);
             this.groupBox1.TabIndex = 3;
@@ -80,18 +83,29 @@
             this.radEspanol.Text = "Español";
             this.radEspanol.UseVisualStyleBackColor = true;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(12, 37);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(258, 297);
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.ClientSize = new System.Drawing.Size(705, 375);
+            this.ClientSize = new System.Drawing.Size(800, 452);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.pictureBox1);
             this.Name = "Principal";
             this.Text = "Preguntados ESBA Grupo 1";
             this.Load += new System.EventHandler(this.Principal_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -102,5 +116,6 @@
         private System.Windows.Forms.RadioButton radEnglish;
         private System.Windows.Forms.RadioButton radEspanol;
         private System.Windows.Forms.Button btnAceptarIdioma;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
