@@ -59,6 +59,7 @@
     <Compile Include="PreguntaDAL.cs" />
     <Compile Include="ProductoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RespuestaDal.cs" />
     <Compile Include="TipoDeProductoDAL.cs" />
     <Compile Include="UsuarioDAL.cs" />
   </ItemGroup>

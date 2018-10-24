@@ -223,7 +223,7 @@ namespace DAL
 
         public int EscribiryObtenerValorSP(string pTexto, SqlParameter[] pParametrosSql, string pVariable)
         {
-            //le paso pvariable que especifica la columna del valor que quiero obtener
+            //le paso pVariable que especifica el nombre del parametro que quiero obtener
             //Instanció una variable filasAfectadas que va a terminar devolviendo la cantidad de filas afectadas.
             int filasAfectadas = 0;
             int valor;
