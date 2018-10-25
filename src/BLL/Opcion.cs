@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DAL;
+using System.Data;
 
 namespace BLL
 {
@@ -50,6 +51,26 @@ namespace BLL
                 this._id = valor;
             }
             //si es -1 es porque fallo el insert, quiza deberia retornar algo este alta
+        }
+
+        public List<Opcion> listarOpciones(int preguntaId) 
+        {
+            List<Opcion> lista = new List<Opcion>();
+            OpcionDAL objopciondal = new OpcionDAL();
+            Opcion unaopcion;
+
+            foreach (DataRow fila in objopciondal.obtenerOpciones(preguntaId).Rows)
+            {
+                unaopcion = new Opcion();
+
+                unaopcion._id = Convert.ToInt32(fila["id"]);
+                unaopcion._descripcion = fila["descripcion_opcion"].ToString();
+                unaopcion._correcta = Convert.ToInt32(fila["correcta"]);
+
+                lista.Add(unaopcion);
+            }
+
+            return lista;
         }
     }
 }

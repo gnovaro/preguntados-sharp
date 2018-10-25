@@ -106,6 +106,7 @@ namespace BLL
             Idioma unidioma;
             Categoria unacategoria;
             Usuario unusuario;
+            Opcion opciones;
 
             foreach (DataRow fila in objpreguntadal.obtenerPreguntas(idiomaId).Rows)
             {
@@ -113,14 +114,18 @@ namespace BLL
                 unidioma = new Idioma();
                 unacategoria = new Categoria();
                 unusuario = new Usuario();
+                opciones = new Opcion();
 
                 unapregunta._id = Convert.ToInt32(fila["id"]);
-                unidioma.id = Convert.ToInt32(fila["idioma_id"]);
+                unidioma.id = idiomaId;
                 unapregunta._idioma = unidioma;
                 unacategoria.id = Convert.ToInt32(fila["categoria_id"]);
                 unapregunta._categoria = unacategoria;
                 unapregunta._descripcion = fila["descripcion"].ToString();
-                //falta cargar opciones()
+
+                //Aca obtengo una lista con las opciones de esta pregunta
+                unapregunta._opciones = opciones.listarOpciones(this._id);
+
                 unapregunta._votosPositivos = Convert.ToInt32(fila["votos_positivos"]);
                 unapregunta._votosNegativos = Convert.ToInt32(fila["votos_negativos"]);
                 unusuario.id = Convert.ToInt32(fila["usuario_id"]);

@@ -51,6 +51,15 @@ namespace DAL
             //Aca devuelvo el valor del id despues de hacer el insert y si fallo devuelve -1
             return filavalor;
         }
-        
+
+
+        public DataTable obtenerOpciones(int preguntaId) 
+        {
+            Conexion objConexion = new Conexion();
+            string consultaSql = "SELECT * FROM pregunta_opcion WHERE pregunta_id =" + preguntaId;
+            DataTable dataTablePregunta = objConexion.LeerPorComando(consultaSql);
+
+            return dataTablePregunta;
+        }
     }
 }
