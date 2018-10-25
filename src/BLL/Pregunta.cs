@@ -97,5 +97,39 @@ namespace BLL
             
             return this;
         }
+
+        public List<Pregunta> listarPreguntas(int idiomaId)
+        {
+            List<Pregunta> lista = new List<Pregunta>();
+            PreguntaDAL objpreguntadal = new PreguntaDAL();
+            Pregunta unapregunta;
+            Idioma unidioma;
+            Categoria unacategoria;
+            Usuario unusuario;
+
+            foreach (DataRow fila in objpreguntadal.obtenerPreguntas(idiomaId).Rows)
+            {
+                unapregunta = new Pregunta();
+                unidioma = new Idioma();
+                unacategoria = new Categoria();
+                unusuario = new Usuario();
+
+                unapregunta._id = Convert.ToInt32(fila["id"]);
+                unidioma.id = Convert.ToInt32(fila["idioma_id"]);
+                unapregunta._idioma = unidioma;
+                unacategoria.id = Convert.ToInt32(fila["categoria_id"]);
+                unapregunta._categoria = unacategoria;
+                unapregunta._descripcion = fila["descripcion"].ToString();
+                //falta cargar opciones()
+                unapregunta._votosPositivos = Convert.ToInt32(fila["votos_positivos"]);
+                unapregunta._votosNegativos = Convert.ToInt32(fila["votos_negativos"]);
+                unusuario.id = Convert.ToInt32(fila["usuario_id"]);
+                unapregunta._creador = unusuario;
+
+                lista.Add(unapregunta);
+            }
+
+            return lista;
+        }
     }
 }

@@ -16,5 +16,14 @@ namespace DAL
             DataTable dataTablePregunta = objConexion.LeerPorComando(consultaSql);
             return dataTablePregunta.Rows[0];
         }
+
+        public DataTable obtenerPreguntas(int idiomaId) 
+        {
+            Conexion objConexion = new Conexion();
+            string consultaSql = "SELECT * FROM pregunta WHERE idioma_id=" + idiomaId + " AND estado = 1";
+            DataTable dataTablePregunta = objConexion.LeerPorComando(consultaSql);
+
+            return dataTablePregunta;
+        }
     }
 }
