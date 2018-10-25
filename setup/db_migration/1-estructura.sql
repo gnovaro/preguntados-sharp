@@ -2,7 +2,7 @@
  * Preguntados ESTRUCTURA SQL
  * ESBA
  * GRUPO 1: Novaro, Sumi, Guido, Rodriguez
- * @version: 1.0.6
+ * @version: 1.0.8
  */
 -- Creamos la base de datos
 CREATE DATABASE preguntados;
@@ -101,7 +101,7 @@ CREATE TABLE pregunta
 	idioma_id int NOT NULL,
 	categoria_id int NOT NULL,
 	descripcion varchar(100) NOT NULL,
-	opcion_id_correcta bigint NOT NULL,
+	opcion_id_correcta bigint NULL,
 	votos_positivos bigint NOT NULL default 0,
 	votos_negativos bigint NOT NULL default 0,
 	usuario_id bigint NOT NULL, --CREADOR pregunta
@@ -140,34 +140,34 @@ ALTER TABLE respuesta ADD CONSTRAINT PK_respuesta PRIMARY KEY (id);
 -- Creamos Foreign Key FK_pregunta_categoria
 ALTER TABLE pregunta ADD CONSTRAINT FK_pregunta_categoria FOREIGN KEY
 (categoria_id) REFERENCES categoria
-(id) ON UPDATE  CASCADE 
+(id) ON UPDATE  NO ACTION 
  ON DELETE  NO ACTION; 
 
 -- Creamos Foreign key FK_pregunta_idioma
 ALTER TABLE pregunta ADD CONSTRAINT FK_pregunta_idioma FOREIGN KEY
 (idioma_id) REFERENCES idioma
-(id) ON UPDATE  CASCADE 
+(id) ON UPDATE  NO ACTION 
 ON DELETE  NO ACTION;
 																	   
 -- Creamos Foreign Key FK_usuario_idioma
 ALTER TABLE usuario ADD CONSTRAINT
 FK_usuario_idioma FOREIGN KEY
 (idioma_id) REFERENCES idioma
-(id) ON UPDATE  CASCADE 
+(id) ON UPDATE  NO ACTION 
 ON DELETE  NO ACTION;
 
 -- Creamos FK_categoria_idioma
 ALTER TABLE categoria ADD CONSTRAINT
 FK_categoria_idioma FOREIGN KEY
 (idioma_id) REFERENCES idioma
-(id) ON UPDATE  CASCADE 
+(id) ON UPDATE  NO ACTION 
 	 ON DELETE  NO ACTION;
 
 -- Creamos FK_pregunta_opcion
 ALTER TABLE pregunta_opcion ADD CONSTRAINT
 FK_pregunta_opcion_pregunta FOREIGN KEY
 (pregunta_id) REFERENCES pregunta
-(id) ON UPDATE  CASCADE 
+(id) ON UPDATE  NO ACTION 
 ON DELETE  NO ACTION;
 
 
@@ -175,21 +175,21 @@ ON DELETE  NO ACTION;
 ALTER TABLE respuesta ADD CONSTRAINT
 FK_respuesta_usuario FOREIGN KEY
 (usuario_id) REFERENCES usuario
-(id) ON UPDATE  CASCADE 
+(id) ON UPDATE  NO ACTION 
 	 ON DELETE  NO ACTION;
 
 -- Creamos FK respuesta_pregunta
 ALTER TABLE respuesta ADD CONSTRAINT
 FK_respuesta_pregunta FOREIGN KEY
 (pregunta_id) REFERENCES pregunta
-(id) ON UPDATE  CASCADE 
+(id) ON UPDATE  NO ACTION 
 	 ON DELETE  NO ACTION;
 
 -- Creamos FK respuesta_pregunta
 ALTER TABLE respuesta ADD CONSTRAINT
 FK_respuesta_pregunta_opcion FOREIGN KEY
 (pregunta_opcion_id) REFERENCES pregunta_opcion
-(id) ON UPDATE  CASCADE 
+(id) ON UPDATE  NO ACTION 
 	 ON DELETE  NO ACTION;
 
 -- Creamos tabla denuncia
