@@ -131,5 +131,24 @@ namespace BLL
 
             return lista;
         }
+
+        public void alta() 
+        {
+            int valor;
+            PreguntaDAL objpreguntadal = new PreguntaDAL();
+
+            valor = objpreguntadal.alta(this._idioma.id, this._categoria.id, this._descripcion, this._creador.id);
+
+            if (valor != -1)
+            {
+                this._id = valor;
+            }
+        }
+
+        public void altaOpcionCorrectaId(int opcionId) 
+        {
+            PreguntaDAL objpreguntadal = new PreguntaDAL();
+            objpreguntadal.altaOpcionCorrectaId(this._id, opcionId);
+        }
     }
 }
