@@ -36,9 +36,10 @@
             // 
             // btnJugar
             // 
-            this.btnJugar.Location = new System.Drawing.Point(239, 52);
+            this.btnJugar.Location = new System.Drawing.Point(179, 42);
+            this.btnJugar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnJugar.Name = "btnJugar";
-            this.btnJugar.Size = new System.Drawing.Size(283, 69);
+            this.btnJugar.Size = new System.Drawing.Size(212, 56);
             this.btnJugar.TabIndex = 0;
             this.btnJugar.Text = "Jugar";
             this.btnJugar.UseVisualStyleBackColor = true;
@@ -46,40 +47,45 @@
             // 
             // btnPreguntaAgregar
             // 
-            this.btnPreguntaAgregar.Location = new System.Drawing.Point(239, 136);
+            this.btnPreguntaAgregar.Location = new System.Drawing.Point(179, 110);
+            this.btnPreguntaAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPreguntaAgregar.Name = "btnPreguntaAgregar";
-            this.btnPreguntaAgregar.Size = new System.Drawing.Size(283, 69);
+            this.btnPreguntaAgregar.Size = new System.Drawing.Size(212, 56);
             this.btnPreguntaAgregar.TabIndex = 1;
             this.btnPreguntaAgregar.Text = "Agregar pregunta";
             this.btnPreguntaAgregar.UseVisualStyleBackColor = true;
+            this.btnPreguntaAgregar.Click += new System.EventHandler(this.btnPreguntaAgregar_Click);
             // 
             // btnPerfil
             // 
-            this.btnPerfil.Location = new System.Drawing.Point(239, 229);
+            this.btnPerfil.Location = new System.Drawing.Point(179, 186);
+            this.btnPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(283, 69);
+            this.btnPerfil.Size = new System.Drawing.Size(212, 56);
             this.btnPerfil.TabIndex = 2;
             this.btnPerfil.Text = "Perfil";
             this.btnPerfil.UseVisualStyleBackColor = true;
             // 
             // btnRanking
             // 
-            this.btnRanking.Location = new System.Drawing.Point(239, 319);
+            this.btnRanking.Location = new System.Drawing.Point(179, 259);
+            this.btnRanking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnRanking.Name = "btnRanking";
-            this.btnRanking.Size = new System.Drawing.Size(283, 69);
+            this.btnRanking.Size = new System.Drawing.Size(212, 56);
             this.btnRanking.TabIndex = 3;
             this.btnRanking.Text = "Ranking";
             this.btnRanking.UseVisualStyleBackColor = true;
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.btnRanking);
             this.Controls.Add(this.btnPerfil);
             this.Controls.Add(this.btnPreguntaAgregar);
             this.Controls.Add(this.btnJugar);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "MenuPrincipal";
             this.Text = "Menu Preguntados";
             this.Load += new System.EventHandler(this.Menu_Load);

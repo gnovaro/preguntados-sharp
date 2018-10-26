@@ -40,5 +40,12 @@ namespace Presentacion.Formularios
             Juego frmJuego = new Juego(this._usuario);
             frmJuego.Show();
         }
+
+        private void btnPreguntaAgregar_Click(object sender, EventArgs e)
+        {
+            PreguntaFrm frmAgregarpregunta = new PreguntaFrm(this._usuario);
+            frmAgregarpregunta.Show();
+
+        }
     }
 }
