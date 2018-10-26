@@ -31,19 +31,13 @@ namespace BLL
             set { _correcta = value; }
         }
 
-        public void alta(int preguntaId) 
-        {
-            OpcionDAL objopciondal = new OpcionDAL();
-
-            objopciondal.alta(preguntaId,this._descripcion,this._correcta);
-        }
-
-        public void altaCorrecta(int preguntaId)
+        
+        public void alta(int preguntaId)
         {
             OpcionDAL objopciondal = new OpcionDAL();
             int valor;
 
-            valor = objopciondal.altaCorrecta(preguntaId, this._descripcion , this._correcta);
+            valor = objopciondal.alta(preguntaId, this._descripcion , this._correcta);
 
             //En valor obtengo el id luego de hacer el insert y se lo paso al objeto
             if (valor != -1)

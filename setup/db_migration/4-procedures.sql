@@ -32,21 +32,9 @@ VALUES(@p_idioma_id, @p_categoria_id, @p_descripcion, NULL, @p_usuario_id)
 SET @p_id = SCOPE_IDENTITY()
 END
 
---Se crea el procedimiento para el alta de una opcion(este procedimiento seria para opciones no correctas,donde no me importa saber su id)
-CREATE PROCEDURE opcion_alta
-(
-@p_pregunta_id bigint,
-@p_descripcion_opcion varchar(80),
-@p_correcta smallint
-)
-AS
-BEGIN
-INSERT INTO pregunta_opcion(pregunta_id, descripcion_opcion, correcta)
-VALUES(@p_pregunta_id, @p_descripcion_opcion, @p_correcta)
-END
 
---Se crea el procedimiento para el alta de una opcion correcta, y obtener su id(Aca si me importa saber el id, para pasarselo a pregunta)
-CREATE PROCEDURE opcion_correcta_alta
+--Se crea el procedimiento para el alta de una opcion , y obtener su id(me importa saber el id, para pasarselo a pregunta)
+CREATE PROCEDURE opcion_alta
 (
 @p_id bigint output,
 @p_pregunta_id bigint,
