@@ -39,9 +39,9 @@ namespace DAL
         {
             Conexion objConexion = new Conexion();
             string consultaSql = "SELECT * FROM pregunta_opcion WHERE pregunta_id =" + preguntaId;
-            DataTable dataTablePregunta = objConexion.LeerPorComando(consultaSql);
+            DataTable dataTableOpcion = objConexion.LeerPorComando(consultaSql);
 
-            return dataTablePregunta;
+            return dataTableOpcion;
         }
     }
 }

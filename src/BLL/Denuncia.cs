@@ -49,6 +49,13 @@ namespace BLL
             get { return _pregunta; }
             set { _pregunta = value; }
         }
+
+
+        public void alta() 
+        {
+            DenunciaDAL objdenunciadal = new DenunciaDAL();
+            objdenunciadal.alta(this._usuario.id, this._pregunta.id, this._descripcion, this._fecha);
+        }
         
     }
 }
