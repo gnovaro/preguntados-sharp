@@ -124,7 +124,7 @@ namespace BLL
                 unapregunta._descripcion = fila["descripcion"].ToString();
 
                 //Aca obtengo una lista con las opciones de esta pregunta
-                unapregunta._opciones = opciones.listarOpciones(this._id);
+                unapregunta._opciones = opciones.listarOpciones(unapregunta._id);
 
                 unapregunta._votosPositivos = Convert.ToInt32(fila["votos_positivos"]);
                 unapregunta._votosNegativos = Convert.ToInt32(fila["votos_negativos"]);
