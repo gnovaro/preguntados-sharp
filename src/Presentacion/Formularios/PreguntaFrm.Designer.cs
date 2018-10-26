@@ -1,6 +1,6 @@
 ﻿namespace Presentacion.Formularios
 {
-    partial class Pregunta
+    partial class PreguntaFrm
     {
         /// <summary>
         /// Required designer variable.

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Presentacion.Formularios
 {
-    public partial class Pregunta : Form
+    public partial class PreguntaFrm : Form
     {
-        public Pregunta()
+        public PreguntaFrm()
         {
             InitializeComponent();
         }

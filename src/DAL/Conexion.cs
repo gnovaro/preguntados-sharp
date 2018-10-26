@@ -24,15 +24,22 @@ namespace DAL
 
         private void Conectar()
         {
-            //strCadenaDeConexion = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=preguntados;Data Source=.\\INSTANCIA_2012";
+            strCadenaDeConexion = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=preguntados;Data Source=.\\SQLSERVER2017";
             //strCadenaDeConexion = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=preguntados;Data Source=.";
 
-            strCadenaDeConexion = "Data Source = localhost; Initial Catalog = preguntados; Integrated Security = True; MultipleActiveResultSets = True";
+            //strCadenaDeConexion = "Data Source = .\\SQLSERVER2017; Initial Catalog = preguntados; Integrated Security = True; MultipleActiveResultSets = True";
 
             //Instanció un objeto del tipo SqlConnection
             objConexion = new SqlConnection();
             objConexion.ConnectionString = strCadenaDeConexion;
-            objConexion.Open();
+            try
+            {
+                objConexion.Open();
+            } catch (Exception e)
+            {
+                Console.WriteLine("{0} Exception caught.", e);
+            }
+
         }
 
         /* -------------------- private void Desconectar() ------------ 

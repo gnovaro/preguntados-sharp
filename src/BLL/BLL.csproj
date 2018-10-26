@@ -55,6 +55,7 @@
   <ItemGroup>
     <Compile Include="Categoria.cs" />
     <Compile Include="Idioma.cs" />
+    <Compile Include="Juego.cs" />
     <Compile Include="Opcion.cs" />
     <Compile Include="Pregunta.cs" />
     <Compile Include="Producto.cs" />
