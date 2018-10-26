@@ -101,7 +101,7 @@ CREATE TABLE pregunta
 	idioma_id int NOT NULL,
 	categoria_id int NOT NULL,
 	descripcion varchar(100) NOT NULL,
-	opcion_id_correcta bigint NULL,
+	opcion_id_correcta bigint NOT NULL,
 	votos_positivos bigint NOT NULL default 0,
 	votos_negativos bigint NOT NULL default 0,
 	usuario_id bigint NOT NULL, --CREADOR pregunta
@@ -170,7 +170,13 @@ FK_pregunta_opcion_pregunta FOREIGN KEY
 (id) ON UPDATE  NO ACTION 
 ON DELETE  NO ACTION;
 
-
+-- CREAMOS FK_pregunta_pregunta_opcion
+ALTER TABLE pregunta ADD CONSTRAINT
+FK_pregunta_pregunta_opcion FOREIGN KEY
+(pregunta_id_correcta) REFERENCES pregunta_opcion 
+(id) ON UPDATE NO ACTION
+ON DELETE NO ACTION;
+						  
 -- Creamos FK respuesta_usuario
 ALTER TABLE respuesta ADD CONSTRAINT
 FK_respuesta_usuario FOREIGN KEY
