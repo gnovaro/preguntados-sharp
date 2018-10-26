@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Conexion.cs" />
+    <Compile Include="DenunciaDAL.cs" />
     <Compile Include="IdiomaDAL.cs" />
     <Compile Include="OpcionDAL.cs" />
     <Compile Include="PreguntaDAL.cs" />

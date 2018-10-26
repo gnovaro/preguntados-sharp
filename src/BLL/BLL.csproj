@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Categoria.cs" />
+    <Compile Include="Denuncia.cs" />
     <Compile Include="Idioma.cs" />
     <Compile Include="Juego.cs" />
     <Compile Include="Opcion.cs" />
