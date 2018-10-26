@@ -76,3 +76,18 @@ BEGIN
 INSERT INTO respuesta(usuario_id, pregunta_id, pregunta_opcion_id, correctamente)
 VALUES(@p_usuario_id, @p_pregunta_id, @p_pregunta_opcion_id, @p_correctamente)
 END
+
+
+--se crea un procedimiento para el alta de denuncia
+CREATE PROCEDURE denuncia_alta
+(
+@p_usuario_id bigint,
+@p_pregunta_id bigint,
+@p_descripcion varchar(255),
+@p_fecha datetime
+)
+AS
+BEGIN
+INSERT INTO denuncia(usuario_id, pregunta_id, descripcion, fecha)
+VALUES(@p_usuario_id, @p_pregunta_id, @p_descripcion, @p_fecha)
+END
