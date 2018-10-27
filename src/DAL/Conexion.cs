@@ -24,11 +24,11 @@ namespace DAL
 
         private void Conectar()
         {
-            strCadenaDeConexion = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=preguntados;Data Source=.\\SQLSERVER2017";
+            //strCadenaDeConexion = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=preguntados;Data Source=.\\SQLSERVER2017";
             //strCadenaDeConexion = "Provider=SQLOLEDB.1;Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=preguntados;Data Source=.";
 
             //strCadenaDeConexion = "Data Source = .\\SQLSERVER2017; Initial Catalog = preguntados; Integrated Security = True; MultipleActiveResultSets = True";
-
+            strCadenaDeConexion = "Integrated Security=SSPI;Persist Security Info=False;Initial Catalog=preguntados;Data Source=.\\SQLEXPRESS";
             //Instanció un objeto del tipo SqlConnection
             objConexion = new SqlConnection();
             objConexion.ConnectionString = strCadenaDeConexion;
