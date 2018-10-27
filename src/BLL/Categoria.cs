@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAL;
+using System.Data;
 
 namespace BLL
 {
@@ -35,6 +37,27 @@ namespace BLL
         {
             get { return _estado; }
             set { _estado = value; }
+        }
+
+        public List<Categoria> listarCategorias(int idiomaId) 
+        {
+            List<Categoria> lista = new List<Categoria>();
+            CategoriaDAL objcategoriadal = new CategoriaDAL();
+            Categoria unacategoria;
+            Idioma unidioma = new Idioma();
+            unidioma.id = idiomaId;
+
+            foreach (DataRow fila in objcategoriadal.obtenerCategorias(idiomaId).Rows)
+            {
+                unacategoria = new Categoria();
+
+                unacategoria._idioma = unidioma;
+                unacategoria._id = Convert.ToInt32(fila["id"]);
+                unacategoria._nombre = fila["nombre"].ToString();
+                lista.Add(unacategoria);
+            }
+
+            return lista;
         }
     }
 }
