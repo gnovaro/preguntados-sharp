@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\IdiomaFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\IdiomaFrm.Designer.cs">
+      <DependentUpon>IdiomaFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\JuegoFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +94,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\IdiomaFrm.resx">
+      <DependentUpon>IdiomaFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\JuegoFrm.resx">
       <DependentUpon>JuegoFrm.cs</DependentUpon>
     </EmbeddedResource>

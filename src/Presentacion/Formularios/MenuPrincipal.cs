@@ -29,7 +29,7 @@ namespace Presentacion.Formularios
         private void Menu_Load(object sender, EventArgs e)
         {
             //Ingles
-            if(this._usuario.idioma.id == 2)
+            if (this._usuario.idioma.id == 2)
             {
                 btnJugar.Text = "Play";
             }                                
@@ -38,7 +38,9 @@ namespace Presentacion.Formularios
         private void btnJugar_Click(object sender, EventArgs e)
         {
             JuegoFrm frmJuego = new JuegoFrm(this._usuario);
+            frmJuego.MdiParent = this.MdiParent;
             frmJuego.Show();
+
         }
 
         private void btnPreguntaAgregar_Click(object sender, EventArgs e)
