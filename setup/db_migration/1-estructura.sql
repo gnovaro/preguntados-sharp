@@ -2,7 +2,7 @@
  * Preguntados ESTRUCTURA SQL
  * ESBA
  * GRUPO 1: Novaro, Sumi, Guido, Rodriguez
- * @version: 1.0.8
+ * @version: 1.0.9
  */
 -- Creamos la base de datos
 CREATE DATABASE preguntados;
@@ -213,3 +213,19 @@ ALTER TABLE denuncia ADD CONSTRAINT PK_denuncia PRIMARY KEY CLUSTERED(id);
 
 -- Le añado un indicide por fecha
 ALTER TABLE denuncia ADD CONSTRAINT DF_denuncia_fecha DEFAULT GETDATE() FOR fecha;
+
+
+-- FK_denuncia_pregunta
+ALTER TABLE denuncia ADD CONSTRAINT
+FK_denuncia_pregunta FOREIGN KEY
+(pregunta_id) REFERENCES pregunta
+(id	) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION; 
+
+-- FK_denuncua_usuario
+ALTER TABLE denuncia ADD CONSTRAINT
+FK_denuncia_usuario FOREIGN KEY
+(usuario_id	) REFERENCES dbo.usuario
+(id) ON UPDATE  NO ACTION 
+	 ON DELETE  NO ACTION;
+	
