@@ -56,11 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formularios\Juego.cs">
+    <Compile Include="Formularios\JuegoFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Juego.Designer.cs">
-      <DependentUpon>Juego.cs</DependentUpon>
+    <Compile Include="Formularios\JuegoFrm.Designer.cs">
+      <DependentUpon>JuegoFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\MenuPrincipal.cs">
       <SubType>Form</SubType>
@@ -80,10 +80,16 @@
     <Compile Include="Formularios\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\UsuarioFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\UsuarioFrm.Designer.cs">
+      <DependentUpon>UsuarioFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\Juego.resx">
-      <DependentUpon>Juego.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\JuegoFrm.resx">
+      <DependentUpon>JuegoFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
@@ -93,6 +99,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\UsuarioFrm.resx">
+      <DependentUpon>UsuarioFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -119,6 +128,10 @@
     <ProjectReference Include="..\BLL\BLL.csproj">
       <Project>{E5016B95-A0AA-4213-A792-7D1843267036}</Project>
       <Name>BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{39cdaaf7-c6ad-43ea-9253-de8d57cec716}</Project>
+      <Name>Core</Name>
     </ProjectReference>
     <ProjectReference Include="..\DAL\DAL.csproj">
       <Project>{A5FD79EA-5462-43DB-8AE0-B6EE5A2A78A1}</Project>

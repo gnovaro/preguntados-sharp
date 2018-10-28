@@ -1,20 +1,19 @@
 --Se crea el procedimiento para el alta de usuarios, con un parametro id de salida
-CREATE PROCEDURE usuario_alta
+ALTER PROCEDURE usuario_alta
 (
- @p_id bigint output,
- @p_nombre varchar(50),
- @p_email varchar(254),
- @p_idioma_id int,
- @p_fechanac date,
- @p_contrasena varchar(80)
+	 @nombre varchar(50),
+	 @email varchar(254),
+	 @idioma_id int,
+	 @fechanac date = null,
+	 @contrasena varchar(80),
+	 @id bigint output
 )
 AS
 BEGIN
-INSERT INTO usuario(nombre, email,idioma_id, fecha_nac,contrasena)
-VALUES (@p_nombre, @p_email,@p_idioma_id,@p_fechanac,HASHBYTES('SHA2_256',CONCAT(@p_contrasena,'3$B4')))
-set @p_id = SCOPE_IDENTITY()
-END
-
+	INSERT INTO usuario(nombre, email,idioma_id, fecha_nac,contrasena)
+	VALUES (@nombre, @email,@idioma_id,@fechanac,HASHBYTES('SHA2_256',CONCAT(@contrasena,'3$B4')))
+	set @id = SCOPE_IDENTITY()
+END;
 
 --Se crea el procedimiento para el alta de una pregunta, con un parametro id de salida(Lo necesito para pasarselo a las opciones)
 CREATE PROCEDURE pregunta_alta

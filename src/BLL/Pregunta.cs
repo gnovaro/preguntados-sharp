@@ -85,16 +85,21 @@ namespace BLL
          * @param int idiomaId
          * @return Pregunta
          */
-        public Pregunta obtenerPreguntaRandom(int idiomaId)
+        public Pregunta obtenerPreguntaRandom(int idiomaId,int categoriaId)
         {
             //Pregunta preguntaObj = new Pregunta();
             PreguntaDAL pregDal = new DAL.PreguntaDAL();
             //OpcionDAL opcDal = new DAL.OpcionDAL();
-            DataRow row = pregDal.obtenerPreguntaRandom(idiomaId);
+            DataRow row = pregDal.obtenerPreguntaRandom(idiomaId,categoriaId);
             this.id = Convert.ToInt32(row["id"].ToString());
             this.descripcion = row["descripcion"].ToString();
 
-            
+            //Obtengo las opciones de la pregunta
+
+            Opcion preguntaOpcion = new Opcion();
+            this.opciones = new List<Opcion>();
+            this.opciones = preguntaOpcion.listarOpciones(this.id);
+
             return this;
         }
 

@@ -17,15 +17,15 @@ namespace DAL
             Conexion objconexion = new Conexion();
             string procedimiento = "usuario_alta";
             int filavalor;
-            string variable = "@p_id";
+            string variable = "@id";
             SqlParameter[] parametros = new SqlParameter[6];
 
-            parametros[0] = objconexion.crearParametroDeSalida("@p_id");
-            parametros[1] = objconexion.crearParametro("@p_nombre", nombre);
-            parametros[2] = objconexion.crearParametro("@p_email", email);
-            parametros[3] = objconexion.crearParametro("@p_idioma_id", idiomaId);
-            parametros[4] = objconexion.crearParametro("@p_fechanac", fecha);
-            parametros[5] = objconexion.crearParametro("@p_contrasena", contrasena);
+            parametros[0] = objconexion.crearParametro("@nombre", nombre);
+            parametros[1] = objconexion.crearParametro("@email", email);
+            parametros[2] = objconexion.crearParametro("@idioma_id", idiomaId);
+            parametros[3] = objconexion.crearParametro("@fechanac", fecha);
+            parametros[4] = objconexion.crearParametro("@contrasena", contrasena);
+            parametros[5] = objconexion.crearParametroDeSalida("@id");
 
             filavalor = objconexion.EscribiryObtenerValorSP(procedimiento,parametros,variable);
             //Aca devuelvo el valor del id despues de hacer el insert y si fallo devuelve -1

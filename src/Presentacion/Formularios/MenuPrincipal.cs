@@ -37,7 +37,7 @@ namespace Presentacion.Formularios
 
         private void btnJugar_Click(object sender, EventArgs e)
         {
-            Juego frmJuego = new Juego(this._usuario);
+            JuegoFrm frmJuego = new JuegoFrm(this._usuario);
             frmJuego.Show();
         }
 

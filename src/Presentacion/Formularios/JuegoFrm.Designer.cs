@@ -1,6 +1,6 @@
 ﻿namespace Presentacion.Formularios
 {
-    partial class Juego
+    partial class JuegoFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,16 +29,16 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Juego));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JuegoFrm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.txtPregunta = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.radOpcion4 = new System.Windows.Forms.RadioButton();
+            this.radOpcion3 = new System.Windows.Forms.RadioButton();
+            this.radOpcion2 = new System.Windows.Forms.RadioButton();
             this.radOpcion1 = new System.Windows.Forms.RadioButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnResponderPregunta = new System.Windows.Forms.Button();
-            this.radOpcion2 = new System.Windows.Forms.RadioButton();
-            this.radOpcion3 = new System.Windows.Forms.RadioButton();
-            this.radOpcion4 = new System.Windows.Forms.RadioButton();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,6 +63,27 @@
             resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
+            // radOpcion4
+            // 
+            resources.ApplyResources(this.radOpcion4, "radOpcion4");
+            this.radOpcion4.Name = "radOpcion4";
+            this.radOpcion4.TabStop = true;
+            this.radOpcion4.UseVisualStyleBackColor = true;
+            // 
+            // radOpcion3
+            // 
+            resources.ApplyResources(this.radOpcion3, "radOpcion3");
+            this.radOpcion3.Name = "radOpcion3";
+            this.radOpcion3.TabStop = true;
+            this.radOpcion3.UseVisualStyleBackColor = true;
+            // 
+            // radOpcion2
+            // 
+            resources.ApplyResources(this.radOpcion2, "radOpcion2");
+            this.radOpcion2.Name = "radOpcion2";
+            this.radOpcion2.TabStop = true;
+            this.radOpcion2.UseVisualStyleBackColor = true;
+            // 
             // radOpcion1
             // 
             resources.ApplyResources(this.radOpcion1, "radOpcion1");
@@ -75,29 +96,9 @@
             resources.ApplyResources(this.btnResponderPregunta, "btnResponderPregunta");
             this.btnResponderPregunta.Name = "btnResponderPregunta";
             this.btnResponderPregunta.UseVisualStyleBackColor = true;
+            this.btnResponderPregunta.Click += new System.EventHandler(this.btnResponderPregunta_Click);
             // 
-            // radOpcion2
-            // 
-            resources.ApplyResources(this.radOpcion2, "radOpcion2");
-            this.radOpcion2.Name = "radOpcion2";
-            this.radOpcion2.TabStop = true;
-            this.radOpcion2.UseVisualStyleBackColor = true;
-            // 
-            // radOpcion3
-            // 
-            resources.ApplyResources(this.radOpcion3, "radOpcion3");
-            this.radOpcion3.Name = "radOpcion3";
-            this.radOpcion3.TabStop = true;
-            this.radOpcion3.UseVisualStyleBackColor = true;
-            // 
-            // radOpcion4
-            // 
-            resources.ApplyResources(this.radOpcion4, "radOpcion4");
-            this.radOpcion4.Name = "radOpcion4";
-            this.radOpcion4.TabStop = true;
-            this.radOpcion4.UseVisualStyleBackColor = true;
-            // 
-            // Juego
+            // JuegoFrm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -105,7 +106,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtPregunta);
             this.Controls.Add(this.panel1);
-            this.Name = "Juego";
+            this.Name = "JuegoFrm";
             this.Load += new System.EventHandler(this.Juego_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

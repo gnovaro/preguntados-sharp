@@ -10,10 +10,10 @@ namespace DAL
 {
     public class PreguntaDAL
     {
-        public DataRow obtenerPreguntaRandom(int idiomaId)
+        public DataRow obtenerPreguntaRandom(int idiomaId,int categoriaId)
         {
             Conexion objConexion = new Conexion();
-            string consultaSql = "SELECT TOP 1 * FROM pregunta WHERE idioma_id="+ idiomaId;
+            string consultaSql = "SELECT TOP 1 * FROM pregunta WHERE categoria_id="+ categoriaId  + " AND idioma_id=" +idiomaId +" AND estado = 1 ORDER BY NEWID()";
             DataTable dataTablePregunta = objConexion.LeerPorComando(consultaSql);
             return dataTablePregunta.Rows[0];
         }

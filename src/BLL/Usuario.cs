@@ -65,19 +65,30 @@ namespace BLL
             set { _preguntas = value; }
         }
 
-        public void alta() 
+        public String alta() 
         {
+            String mensaje = "";
             int valor;
-            UsuarioDAL objusuariodal = new UsuarioDAL();
+            UsuarioDAL objusuarioDal = new UsuarioDAL();
 
-            valor = objusuariodal.alta(this._nombre, this._email, this._idioma.id, this._fechanac,this._contrasena);
-            
-            //En valor obtengo el id luego de hacer el insert y se lo paso al objeto
-            if( valor != -1)
+            if (this._nombre != "" && this.email != "" && this.contrasena != "" && this._idioma.id != 0)
             {
-                this._id = valor;
+                valor = objusuarioDal.alta(this._nombre, this._email, this._idioma.id, this._fechanac, this._contrasena);
+
+                //En valor obtengo el id luego de hacer el insert y se lo paso al objeto
+                if (valor != -1)
+                {
+                    this._id = valor;
+                    mensaje = "Se creo el usuario correctamente.";
+                }
             }
+            else
+            {
+                mensaje = "Los campos nombre, email, contraseña e idioma son obligatorios";
+            }
+
             //si es -1 es porque fallo el insert, quiza deberia retornar algo este alta
+            return mensaje;
         }
     }
 }
