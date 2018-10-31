@@ -25,6 +25,7 @@ namespace Presentacion.Formularios
             cmbCategoria.DataSource = objcategoria.listarCategorias(user.idioma.id);
             cmbCategoria.DisplayMember = "nombre";
             cmbCategoria.ValueMember = "id";
+            cmbCategoria.SelectedItem = null;
 
         }
         private void btnSalir_Click(object sender, EventArgs e)
@@ -39,80 +40,115 @@ namespace Presentacion.Formularios
             Idioma unidioma = new Idioma();
             Categoria unacategoria = new Categoria();
 
-            unidioma.id = _usuario.idioma.id;
-            unacategoria.id = Convert.ToInt32(cmbCategoria.SelectedValue);
-            //Aca le seteo id del admin para probar 
-            _usuario.id = 1;
-
-            unapregunta.idioma = unidioma;
-            unapregunta.categoria = unacategoria;
-            unapregunta.creador = _usuario;
-            unapregunta.descripcion = txtPregunta.Text;
-            unapregunta.alta();
-
-            Opcion op1 = new Opcion();
-            Opcion op2 = new Opcion();
-            Opcion op3 = new Opcion();
-            Opcion op4 = new Opcion();
-
-            op1.descripcion = txtRespuesta1.Text;
-            op2.descripcion = txtRespuesta2.Text;
-            op3.descripcion = txtRespuesta3.Text;
-            op4.descripcion = txtRespuesta4.Text;
-
-            //Alta opcion 1
-            if (rdbRespuesta1.Checked)
+            
+            if (cmbCategoria.SelectedItem != null)
             {
-                op1.correcta = 1;
-                op1.alta(unapregunta.id);
-                unapregunta.altaOpcionCorrectaId(op1.id);
+                if (txtPregunta.Text != "")
+                {
+
+                    if (txtRespuesta1.Text != "" && txtRespuesta2.Text != "" && txtRespuesta3.Text != "" && txtRespuesta4.Text != "")
+                    {
+
+                        if (rdbRespuesta1.Checked || rdbRespuesta2.Checked || rdbRespuesta3.Checked || rdbRespuesta4.Checked)
+                        {
+                            unidioma.id = _usuario.idioma.id;
+                            unacategoria.id = Convert.ToInt32(cmbCategoria.SelectedValue);
+                            //Aca le seteo id del admin para probar 
+                            _usuario.id = 1;
+
+                            unapregunta.idioma = unidioma;
+                            unapregunta.categoria = unacategoria;
+                            unapregunta.creador = _usuario;
+                            unapregunta.descripcion = txtPregunta.Text;
+                            unapregunta.alta();
+
+                            Opcion op1 = new Opcion();
+                            Opcion op2 = new Opcion();
+                            Opcion op3 = new Opcion();
+                            Opcion op4 = new Opcion();
+
+                            op1.descripcion = txtRespuesta1.Text;
+                            op2.descripcion = txtRespuesta2.Text;
+                            op3.descripcion = txtRespuesta3.Text;
+                            op4.descripcion = txtRespuesta4.Text;
+
+                            //Alta opcion 1
+                            if (rdbRespuesta1.Checked)
+                            {
+                                op1.correcta = 1;
+                                op1.alta(unapregunta.id);
+                                unapregunta.altaOpcionCorrectaId(op1.id);
+                            }
+                            else
+                            {
+                                op1.correcta = 0;
+                                op1.alta(unapregunta.id);
+                            }
+
+                            //Alta opcion 2
+                            if (rdbRespuesta2.Checked)
+                            {
+                                op2.correcta = 1;
+                                op2.alta(unapregunta.id);
+                                unapregunta.altaOpcionCorrectaId(op2.id);
+                            }
+                            else
+                            {
+                                op2.correcta = 0;
+                                op2.alta(unapregunta.id);
+                            }
+
+                            //Alta opcion 3
+                            if (rdbRespuesta3.Checked)
+                            {
+                                op3.correcta = 1;
+                                op3.alta(unapregunta.id);
+                                unapregunta.altaOpcionCorrectaId(op3.id);
+                            }
+                            else
+                            {
+                                op3.correcta = 0;
+                                op3.alta(unapregunta.id);
+                            }
+
+                            //alta opcion 4
+                            if (rdbRespuesta4.Checked)
+                            {
+                                op4.correcta = 1;
+                                op4.alta(unapregunta.id);
+                                unapregunta.altaOpcionCorrectaId(op4.id);
+                            }
+                            else
+                            {
+                                op4.correcta = 0;
+                                op4.alta(unapregunta.id);
+                            }
+
+                            MessageBox.Show("Los datos se han guardado correctamente");
+                        }
+                        else
+                        {
+                            MessageBox.Show("Debe elegir la opcion correcta");
+                        }
+
+                    }
+                    else
+                    {
+                        MessageBox.Show("Debe completar todos los campos de respuesta");
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("Debe completar el campo de pregunta");
+                }
             }
             else 
-            { 
-               op1.correcta = 0;
-               op1.alta(unapregunta.id);
-            }
-
-            //Alta opcion 2
-            if (rdbRespuesta2.Checked)
             {
-                op2.correcta = 1;
-                op2.alta(unapregunta.id);
-                unapregunta.altaOpcionCorrectaId(op2.id);
+                MessageBox.Show("Debe seleccionar una categoria");
             }
-            else 
-            { 
-                op2.correcta = 0;
-                op2.alta(unapregunta.id);
-            }
-
-            //Alta opcion 3
-            if (rdbRespuesta3.Checked)
-            {
-                op3.correcta = 1;
-                op3.alta(unapregunta.id);
-                unapregunta.altaOpcionCorrectaId(op3.id);
-            }
-            else 
-            {
-                op3.correcta = 0;
-                op3.alta(unapregunta.id);
-            }
-
-            //alta opcion 4
-            if (rdbRespuesta4.Checked)
-            {
-                op4.correcta = 1;
-                op4.alta(unapregunta.id);
-                unapregunta.altaOpcionCorrectaId(op4.id);
-            }
-            else 
-            {
-                op4.correcta = 0;
-                op4.alta(unapregunta.id);
-            }
-
-            MessageBox.Show("Los datos se han guardado correctamente");
+            
+            
         }
     }
 }
