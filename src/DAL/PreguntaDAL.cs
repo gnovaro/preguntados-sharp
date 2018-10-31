@@ -33,14 +33,14 @@ namespace DAL
             Conexion objconexion = new Conexion();
             string procedimiento = "pregunta_alta";
             int filavalor;
-            string variable = "@p_id";
+            string variable = "@id";
             SqlParameter[] parametros = new SqlParameter[5];
 
-            parametros[0] = objconexion.crearParametroDeSalida("@p_id");
-            parametros[1] = objconexion.crearParametro("@p_idioma_id", idiomaId);
-            parametros[2] = objconexion.crearParametro("@p_categoria_id", categoriaId);
-            parametros[3] = objconexion.crearParametro("@p_descripcion", descripcion);
-            parametros[4] = objconexion.crearParametro("@p_usuario_id", usuarioId);
+            parametros[0] = objconexion.crearParametro("@idioma_id", idiomaId);
+            parametros[1] = objconexion.crearParametro("@categoria_id", categoriaId);
+            parametros[2] = objconexion.crearParametro("@descripcion", descripcion);
+            parametros[3] = objconexion.crearParametro("@usuario_id", usuarioId);
+            parametros[4] = objconexion.crearParametroDeSalida("@id");
 
             filavalor = objconexion.EscribiryObtenerValorSP(procedimiento, parametros, variable);
             //Aca devuelvo el valor del id despues de hacer el insert y si fallo devuelve -1
@@ -55,8 +55,8 @@ namespace DAL
 
             SqlParameter[] parametros = new SqlParameter[2];
 
-            parametros[0] = objconexion.crearParametro("@p_id", id);
-            parametros[1] = objconexion.crearParametro("@p_opcion_id_correcta", opcionId);
+            parametros[0] = objconexion.crearParametro("@id", id);
+            parametros[1] = objconexion.crearParametro("@opcion_id_correcta", opcionId);
             filasafectadas = objconexion.EscribirPorStoreProcedure(procedimiento, parametros);
 
             return filasafectadas;

@@ -18,10 +18,10 @@ namespace DAL
 
             SqlParameter[] parametros = new SqlParameter[4];
 
-            parametros[0] = objconexion.crearParametro("@p_usuario_id", usuarioID);
-            parametros[1] = objconexion.crearParametro("@p_pregunta_id", preguntaId);
-            parametros[2] = objconexion.crearParametro("@p_descripcion", descripcion);
-            parametros[3] = objconexion.crearParametro("@p_fecha", fecha);
+            parametros[0] = objconexion.crearParametro("@usuario_id", usuarioID);
+            parametros[1] = objconexion.crearParametro("@pregunta_id", preguntaId);
+            parametros[2] = objconexion.crearParametro("@descripcion", descripcion);
+            parametros[3] = objconexion.crearParametro("@fecha", fecha);
 
             filasafectadas = objconexion.EscribirPorStoreProcedure(procedimiento,parametros);
 
