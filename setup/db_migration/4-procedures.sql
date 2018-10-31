@@ -17,76 +17,76 @@ END;
 
 --Se crea el procedimiento para el alta de una pregunta, con un parametro id de salida(Lo necesito para pasarselo a las opciones)
 CREATE PROCEDURE pregunta_alta
-(
-@p_id bigint output,
-@p_idioma_id int,
-@p_categoria_id int,
-@p_descripcion varchar(100),
-@p_usuario_id bigint
+(	
+	@idioma_id int,
+	@categoria_id int,
+	@descripcion varchar(100),
+	@usuario_id bigint,
+	@id bigint output
 )
 AS
 BEGIN
-INSERT INTO pregunta(idioma_id,categoria_id,descripcion,opcion_id_correcta, usuario_id)
-VALUES(@p_idioma_id, @p_categoria_id, @p_descripcion, NULL, @p_usuario_id)
-SET @p_id = SCOPE_IDENTITY()
+	INSERT INTO pregunta(idioma_id,categoria_id,descripcion,opcion_id_correcta, usuario_id)
+	VALUES(@idioma_id, @categoria_id, @descripcion, NULL, @usuario_id)
+	SET @id = SCOPE_IDENTITY()
 END
 
 
 --Se crea el procedimiento para el alta de una opcion , y obtener su id(me importa saber el id, para pasarselo a pregunta)
 CREATE PROCEDURE opcion_alta
 (
-@p_id bigint output,
-@p_pregunta_id bigint,
-@p_descripcion_opcion varchar(80),
-@p_correcta smallint
+	@pregunta_id bigint,
+	@descripcion_opcion varchar(80),
+	@correcta smallint,
+	@id bigint output
 )
 AS
 BEGIN
-INSERT INTO pregunta_opcion(pregunta_id, descripcion_opcion, correcta)
-VALUES(@p_pregunta_id, @p_descripcion_opcion, @p_correcta)
-SET @p_id = SCOPE_IDENTITY()
+	INSERT INTO pregunta_opcion(pregunta_id, descripcion_opcion, correcta)
+	VALUES(@pregunta_id, @descripcion_opcion, @correcta)
+	SET @id = SCOPE_IDENTITY()
 END
 
 
 --Se crea un procedimiento para setear el id de la opcion correcta dentro de la pregunta
 CREATE PROCEDURE pregunta_setOpcionCorrecta
 (
-@p_id bigint,
-@p_opcion_id_correcta bigint
+	@id bigint,
+	@opcion_id_correcta bigint
 )
 AS
 BEGIN
-UPDATE pregunta
-SET opcion_id_correcta = @p_opcion_id_correcta
-WHERE id = @p_id
+	UPDATE pregunta
+	SET opcion_id_correcta = @opcion_id_correcta
+	WHERE id = @id
 END
 
 
 --se crea un procedimiento para el alta de una respuesta
 CREATE PROCEDURE respuesta_alta
 (
-@p_usuario_id bigint,
-@p_pregunta_id bigint,
-@p_pregunta_opcion_id bigint,
-@p_correctamente smallint
+	@usuario_id bigint,
+	@pregunta_id bigint,
+	@pregunta_opcion_id bigint,
+	@correctamente smallint
 )
 AS
 BEGIN
-INSERT INTO respuesta(usuario_id, pregunta_id, pregunta_opcion_id, correctamente)
-VALUES(@p_usuario_id, @p_pregunta_id, @p_pregunta_opcion_id, @p_correctamente)
+	INSERT INTO respuesta(usuario_id, pregunta_id, pregunta_opcion_id, correctamente)
+	VALUES(@usuario_id, @pregunta_id, @pregunta_opcion_id, @correctamente)
 END
 
 
 --se crea un procedimiento para el alta de denuncia
 CREATE PROCEDURE denuncia_alta
 (
-@p_usuario_id bigint,
-@p_pregunta_id bigint,
-@p_descripcion varchar(255),
-@p_fecha datetime
+	@usuario_id bigint,
+	@pregunta_id bigint,
+	@descripcion varchar(255),
+	@fecha datetime
 )
 AS
 BEGIN
-INSERT INTO denuncia(usuario_id, pregunta_id, descripcion, fecha)
-VALUES(@p_usuario_id, @p_pregunta_id, @p_descripcion, @p_fecha)
+	INSERT INTO denuncia(usuario_id, pregunta_id, descripcion, fecha)
+	VALUES(@usuario_id, @pregunta_id, @descripcion, @fecha)
 END
