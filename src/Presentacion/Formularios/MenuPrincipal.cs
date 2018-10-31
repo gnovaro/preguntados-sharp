@@ -46,6 +46,7 @@ namespace Presentacion.Formularios
         private void btnPreguntaAgregar_Click(object sender, EventArgs e)
         {
             PreguntaFrm frmAgregarpregunta = new PreguntaFrm(this._usuario);
+            frmAgregarpregunta.MdiParent = this.MdiParent;
             frmAgregarpregunta.Show();
 
         }
