@@ -31,10 +31,11 @@ namespace Presentacion.Formularios
         {
             Random rnd = new Random();
             int categoria_id = rnd.Next(1,5); //Hacemos un random de categoria
-
             this.preguntaRandom = new BLL.Pregunta();
             this.preguntaRandom = this.preguntaRandom.obtenerPreguntaRandom(this._usuario.idioma.id,categoria_id);
             txtPregunta.Text = this.preguntaRandom.descripcion;
+            //desordeno la lista de opciones
+            this.preguntaRandom.desordenarOpciones();
             //Cargamos las opciones
             radOpcion1.Text = this.preguntaRandom.opciones.ElementAt(0).descripcion;
             radOpcion2.Text = this.preguntaRandom.opciones.ElementAt(1).descripcion;

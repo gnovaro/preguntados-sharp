@@ -160,5 +160,20 @@ namespace BLL
             PreguntaDAL objpreguntadal = new PreguntaDAL();
             objpreguntadal.altaOpcionCorrectaId(this._id, opcionId);
         }
+
+        public void desordenarOpciones()
+        {
+            List<Opcion> listaNueva = new List<Opcion>();
+            Random randnum = new Random();
+
+            while(this.opciones.Count > 0)
+            {
+                int val = randnum.Next(0,this.opciones.Count);
+                listaNueva.Add(this.opciones[val]);
+                this.opciones.RemoveAt(val);
+            }
+
+            this.opciones = listaNueva;
+        }
     }
 }
