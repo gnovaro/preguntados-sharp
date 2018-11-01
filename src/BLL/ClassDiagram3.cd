@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="BLL.Categoria">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAADAAAAIAAAACAAABAAAAAAAAAAAAAAAAAEAIAAgA=</HashCode>
+      <FileName>Categoria.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Idioma" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BLL.Denuncia">
+    <Position X="6.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAIRAAgCAEAAFAAABAAAAAAAQAAAAEAAAAAgA=</HashCode>
+      <FileName>Denuncia.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Pregunta" />
+      <Property Name="Usuario" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BLL.Idioma">
+    <Position X="7.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAFAAAAAAAAAAAAAQAACgAAAAgA=</HashCode>
+      <FileName>Idioma.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Juego">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Juego.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BLL.Opcion">
+    <Position X="5.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAEAAFAAABAAAIAAAAACAAgBAAAAgA=</HashCode>
+      <FileName>Opcion.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Pregunta" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BLL.Pregunta">
+    <Position X="2.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACDAAgIIGAAACkAAlgIABAAAIAAAAAAAAAgAASUgA=</HashCode>
+      <FileName>Pregunta.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Juego" />
+      <Property Name="Categoria" />
+      <Property Name="Idioma" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BLL.Respuesta">
+    <Position X="2.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIBAAgCAIAAAACABAAAAAAEQAAAAkBAAAAAA=</HashCode>
+      <FileName>Respuesta.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Respuesta1" />
+      <Property Name="Pregunta" />
+      <Property Name="Opcion" />
+      <Property Name="Usuario" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BLL.Usuario">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQAAAAAAoIgAAACwAABCAABAAAAAABAAAAAAAAIAEgE=</HashCode>
+      <FileName>Usuario.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Juego" />
+      <Property Name="Idioma" />
+    </ShowAsAssociation>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

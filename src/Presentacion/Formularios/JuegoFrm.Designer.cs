@@ -39,12 +39,15 @@
             this.radOpcion1 = new System.Windows.Forms.RadioButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnResponderPregunta = new System.Windows.Forms.Button();
+            this.lblCategoria = new System.Windows.Forms.Label();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.panel1.Controls.Add(this.lblCategoria);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
@@ -98,6 +101,11 @@
             this.btnResponderPregunta.UseVisualStyleBackColor = true;
             this.btnResponderPregunta.Click += new System.EventHandler(this.btnResponderPregunta_Click);
             // 
+            // lblCategoria
+            // 
+            resources.ApplyResources(this.lblCategoria, "lblCategoria");
+            this.lblCategoria.Name = "lblCategoria";
+            // 
             // JuegoFrm
             // 
             resources.ApplyResources(this, "$this");
@@ -108,6 +116,8 @@
             this.Controls.Add(this.panel1);
             this.Name = "JuegoFrm";
             this.Load += new System.EventHandler(this.Juego_Load);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -126,5 +136,6 @@
         private System.Windows.Forms.RadioButton radOpcion1;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnResponderPregunta;
+        private System.Windows.Forms.Label lblCategoria;
     }
 }

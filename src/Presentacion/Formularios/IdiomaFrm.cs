@@ -37,12 +37,20 @@ namespace Presentacion.Formularios
                 lang.id = 2;
 
             }
-            this._usuario.idioma = lang;
 
-            MenuPrincipal frmMenu = new MenuPrincipal(this._usuario);
-            frmMenu.MdiParent = this.MdiParent;
-            frmMenu.Show();
-            this.Hide();
+            //Si no selecciona
+            if(radEspanol.Checked == false && radEnglish.Checked == false)
+            {
+                MessageBox.Show("Por favor seleccione un idioma / Please choose a language");
+            } else {
+                this._usuario.idioma = lang;
+
+                MenuPrincipal frmMenu = new MenuPrincipal(this._usuario);
+                frmMenu.MdiParent = this.MdiParent;
+                frmMenu.Show();
+                this.Hide();
+            }
+
         }
 
         private void IdiomaFrm_Load(object sender, EventArgs e)

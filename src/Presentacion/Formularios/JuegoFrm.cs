@@ -15,6 +15,7 @@ namespace Presentacion.Formularios
     {
         protected Usuario _usuario;
         protected Pregunta preguntaRandom;
+        protected List<Categoria> _categorias;
 
         public JuegoFrm()
         {
@@ -25,14 +26,19 @@ namespace Presentacion.Formularios
         {            
             InitializeComponent();
             this._usuario = user;
+            Categoria categoria = new Categoria();
+            this._categorias = categoria.listarCategorias(this._usuario.idioma.id);
         }
 
         private void Juego_Load(object sender, EventArgs e)
         {
             Random rnd = new Random();
-            int categoria_id = rnd.Next(1,5); //Hacemos un random de categoria
+            int categoriaIndice = rnd.Next(0,4); //Hacemos un random de categoria
+            string categoriaNombre = this._categorias.ElementAt(categoriaIndice).nombre;
+
+            lblCategoria.Text = categoriaNombre;
             this.preguntaRandom = new BLL.Pregunta();
-            this.preguntaRandom = this.preguntaRandom.obtenerPreguntaRandom(this._usuario.idioma.id,categoria_id);
+            this.preguntaRandom = this.preguntaRandom.obtenerPreguntaRandom(this._usuario.idioma.id, this._categorias.ElementAt(categoriaIndice).id);
             txtPregunta.Text = this.preguntaRandom.descripcion;
             //desordeno la lista de opciones
             this.preguntaRandom.desordenarOpciones();

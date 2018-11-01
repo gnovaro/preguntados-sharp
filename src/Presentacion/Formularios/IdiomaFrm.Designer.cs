@@ -43,9 +43,11 @@
             this.groupBox1.Controls.Add(this.btnAceptarIdioma);
             this.groupBox1.Controls.Add(this.radEnglish);
             this.groupBox1.Controls.Add(this.radEspanol);
-            this.groupBox1.Location = new System.Drawing.Point(400, 134);
+            this.groupBox1.Location = new System.Drawing.Point(300, 109);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(289, 153);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(217, 124);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccione un idioma";
@@ -53,9 +55,10 @@
             // btnAceptarIdioma
             // 
             this.btnAceptarIdioma.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.btnAceptarIdioma.Location = new System.Drawing.Point(95, 107);
+            this.btnAceptarIdioma.Location = new System.Drawing.Point(71, 87);
+            this.btnAceptarIdioma.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAceptarIdioma.Name = "btnAceptarIdioma";
-            this.btnAceptarIdioma.Size = new System.Drawing.Size(89, 40);
+            this.btnAceptarIdioma.Size = new System.Drawing.Size(67, 32);
             this.btnAceptarIdioma.TabIndex = 5;
             this.btnAceptarIdioma.Text = "Aceptar";
             this.btnAceptarIdioma.UseVisualStyleBackColor = false;
@@ -64,9 +67,10 @@
             // radEnglish
             // 
             this.radEnglish.AutoSize = true;
-            this.radEnglish.Location = new System.Drawing.Point(197, 55);
+            this.radEnglish.Location = new System.Drawing.Point(148, 45);
+            this.radEnglish.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radEnglish.Name = "radEnglish";
-            this.radEnglish.Size = new System.Drawing.Size(75, 21);
+            this.radEnglish.Size = new System.Drawing.Size(59, 17);
             this.radEnglish.TabIndex = 4;
             this.radEnglish.TabStop = true;
             this.radEnglish.Text = "English";
@@ -74,10 +78,12 @@
             // 
             // radEspanol
             // 
+            this.radEspanol.AutoCheck = false;
             this.radEspanol.AutoSize = true;
-            this.radEspanol.Location = new System.Drawing.Point(13, 55);
+            this.radEspanol.Location = new System.Drawing.Point(10, 45);
+            this.radEspanol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.radEspanol.Name = "radEspanol";
-            this.radEspanol.Size = new System.Drawing.Size(80, 21);
+            this.radEspanol.Size = new System.Drawing.Size(63, 17);
             this.radEspanol.TabIndex = 3;
             this.radEspanol.TabStop = true;
             this.radEspanol.Text = "Español";
@@ -86,19 +92,21 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(112, 77);
+            this.pictureBox1.Location = new System.Drawing.Point(84, 63);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(258, 297);
+            this.pictureBox1.Size = new System.Drawing.Size(194, 241);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
             // IdiomaFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.pictureBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "IdiomaFrm";
             this.Text = "IdiomaFrm";
             this.Load += new System.EventHandler(this.IdiomaFrm_Load);

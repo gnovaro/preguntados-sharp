@@ -8,5 +8,7 @@ namespace BLL
 {
     class Juego
     {
+        protected List<Pregunta> _preguntas;
+        protected Usuario _usuario;
     }
 }
