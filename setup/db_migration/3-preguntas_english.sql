@@ -40,7 +40,7 @@ INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (55,
 INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (56,'Avatar',1);
 INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (56,'Titanic',0);
 INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (56,'Star Wars: The awakening of force',0);
-INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (56,'Avengers: The War of Infinity',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (56,'Avengers: Infinity Wars',0);
 INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (57,'1997',1);
 INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (57,'1996',0);
 INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (57,'1999',0);
