@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using DAL;
 
 namespace BLL
@@ -89,6 +90,31 @@ namespace BLL
 
             //si es -1 es porque fallo el insert, quiza deberia retornar algo este alta
             return mensaje;
+        }
+
+        public bool obtenerUsuario() 
+        {
+            bool valor = false;
+            UsuarioDAL objusuariodal = new UsuarioDAL();
+            DataTable datausuario = objusuariodal.obtenerUsuario(this._email);
+
+            if (datausuario.Rows.Count > 0) 
+            {
+                valor = true;
+                DataRow rowusuario = datausuario.Rows[0];
+                this._id = Convert.ToInt32(rowusuario["id"]);
+                this._nombre = rowusuario["nombre"].ToString();
+                this._fechanac = Convert.ToDateTime(rowusuario["fecha_nac"]);
+                Idioma userIdioma = new Idioma();
+                userIdioma.id = Convert.ToInt32(rowusuario["idioma_id"]);
+                this._idioma = userIdioma;
+                this._puntos = Convert.ToInt32(rowusuario["puntos"]);
+                this._contrasena = rowusuario["contrasena"].ToString();
+
+            }
+            //devuelve false si el email que ingreso no trajo ningun usuario
+            return valor;
+
         }
     }
 }

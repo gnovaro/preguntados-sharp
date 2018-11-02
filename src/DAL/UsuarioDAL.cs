@@ -31,5 +31,14 @@ namespace DAL
             //Aca devuelvo el valor del id despues de hacer el insert y si fallo devuelve -1
             return filavalor;
         }
+
+        public DataTable obtenerUsuario(string email) 
+        {
+            Conexion objConexion = new Conexion();
+            string consultaSql = "SELECT * FROM usuario WHERE email = '" + email + "'";
+            DataTable datausuario = objConexion.LeerPorComando(consultaSql);
+
+            return datausuario;
+        }
     }
 }
