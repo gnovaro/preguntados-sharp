@@ -52,35 +52,63 @@ namespace Presentacion.Formularios
         private void btnResponderPregunta_Click(object sender, EventArgs e)
         {
             Boolean respuesta = false;
+            Respuesta laRespuesta = new Respuesta();
+            laRespuesta.usuario = this._usuario;
+            //seteo su id en 1 para probar el alta
+            laRespuesta.usuario.id = 1;
+            laRespuesta.pregunta = this.preguntaRandom;
 
-            if (radOpcion1.Checked && this.preguntaRandom.opciones.ElementAt(0).correcta == 1)
+            if (radOpcion1.Checked)
             {
-                respuesta = true;
+                laRespuesta.opcion = this.preguntaRandom.opciones.ElementAt(0);
+
+                if (this.preguntaRandom.opciones.ElementAt(0).correcta == 1)
+                {
+                    respuesta = true;
+                }
             }
 
-            if (radOpcion2.Checked && this.preguntaRandom.opciones.ElementAt(1).correcta == 1)
-            {
-                respuesta = true;
+            if (radOpcion2.Checked)
+            {   
+                laRespuesta.opcion = this.preguntaRandom.opciones.ElementAt(1);
+
+                if(this.preguntaRandom.opciones.ElementAt(1).correcta == 1)
+                {
+                    respuesta = true;
+                }
             }
 
-            if (radOpcion3.Checked && this.preguntaRandom.opciones.ElementAt(2).correcta == 1)
-            {
-                respuesta = true;
+            if (radOpcion3.Checked)
+            {   
+                laRespuesta.opcion = this.preguntaRandom.opciones.ElementAt(2);
+
+                if(this.preguntaRandom.opciones.ElementAt(2).correcta == 1)
+                {
+                    respuesta = true;
+                }
             }
 
-            if (radOpcion4.Checked && this.preguntaRandom.opciones.ElementAt(3).correcta == 1)
+            if (radOpcion4.Checked)
             {
-                respuesta = true;
+                laRespuesta.opcion = this.preguntaRandom.opciones.ElementAt(3);
+
+                if (this.preguntaRandom.opciones.ElementAt(3).correcta == 1)
+                {
+                    respuesta = true;
+                }
             }
 
             if (respuesta) {
                 MessageBox.Show("Es correcta");
+                laRespuesta.correcta = 1;
             } else
             {
                 MessageBox.Show("Su respuesta es incorrecta");
+                laRespuesta.correcta = 0;
             }
             
             //@TODO guardar la respuesta
+            laRespuesta.alta();
         }
     }
 }
