@@ -121,7 +121,7 @@ INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,us
 INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (26,1,3,'¿Cuál era la raza del personaje híbrido de ficción Blade?',101,1);
 INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (27,1,3,'¿En qué pueblo vivía el protagonista de la serie Stranger Things, Will Bryers?',105,1);
 INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (28,1,3,'¿Cómo se llama el personaje que interpreta Leonardo DiCaprio en la película Titanic?',109,1);
-INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (29,1,3,'¿Cuál de los siguientes es un monstruo japonés fictisio?',113,1);
+INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (29,1,3,'¿Cuál de los siguientes es un monstruo japonés ficticio?',113,1);
 INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (30,1,3,'Cuantos eran los Ronin que componen la Leyenda de los leales samurais de Ako?',117,1);
 INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (31,1,3,'¿Cuál era el modelo del ciborg "Exterminador" que antagoniza la primer película de Terminator?',121,1);
 
@@ -176,6 +176,12 @@ INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (31,
 INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (32,1,4,'¿En qué juego apareció Mario por primera vez?',126,1);
 INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (33,1,4,'¿Cuál fue el primero video-juego de la historia?',129,1);
 INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (34,1,4,'¿En qué video-juego de la saga Resident Evil hace su aparición el personaje Némesis?',133,1);
+INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (35,1,4,'¿De cuantos mundos consta el Super Mario Bros estrenado en 1985 para la consola NES? ',137,1);
+INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (36,1,4,'¿Quién fue el creador de la saga de terror Silent Hill lanzada en 1999 para Playstation? ',141,1);
+INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (37,1,4,'¿En que consistía la temática del video juego Bloody Roar?',145,1);
+INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (38,1,4,'¿En que consola se estrenó primero el video juego Tomb Raider?',149,1);
+INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (39,1,4,'¿Qué empresa fue la desarrolladora del juego Survival Horror - Dino Crisis lanzado en 1999 para PlayStation 1?',153,1);
+INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (40,1,4,'¿Cuál es la unidad monetaria utilizada en la saga "The Legend of Zelda"?',157,1);
 
 -- Preguntas_opcion (respuestas) categoria 4 Video Juegos
 INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (32,'The Legend of Zelda',0);
@@ -190,6 +196,85 @@ INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (34,
 INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (34,'Resident Evil 2',0);
 INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (34,'Resident Evil 1',0);
 INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (34,'Resident Evil 4',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (35,'8 mundos',1);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (35,'5 mundos',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (35,'32 mundos',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (35,'10 mundos',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (36,'Keiichiro Toyama',1);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (36,'Akira Yamaoka',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (36,'Akira Toriyama',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (36,'Edgard Massachusetts',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (37,'Lucha entre personajes que se transforman en bestias',1);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (37,'Lucha entre naves espaciales',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (37,'Resolución de puzzles con sombría ambientación',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (37,'Lucha entre piratas en islas',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (38,'Sega Saturn',1);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (38,'PlayStation 1',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (38,'PlayStation 2',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (38,'Nintendo 64',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (39,'Capcom',1);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (39,'Konami',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (39,'Valve',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (39,'Activision',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (40,'Rupias',1);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (40,'Zenny',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (40,'Oro',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (40,'Plata',0);
+
+-- Preguntas categoria 5 Libros
+INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (41,1,5,'¿Cuántos libros tiene publicados la saga original de Harry Potter hasta "las Reliquias de la muerte"?',161,1);
+INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (42,1,5,'¿En qué siglo fue fundado el colegio Hogwarts de Magia y Hechicería del universo Harry Potter?',165,1);
+INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (43,1,5,'¿Quén fue el escritor del libro El Señor de los Anillos?',169,1);
+INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (44,1,5,'¿Quién fue el escritor del libro "Las Crónicas de Narnia"?',173,1);
+INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (45,1,5,'¿Quién ideó el libro fictisio: El Necronomicón?',177,1);
+INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (46,1,5,'¿Cuál fue la primer novela policíaca escrita por Agatha Christie?',181,1);
+INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (47,1,5,'¿Cuál de los siguientes libros escribió Edgar Allan Poe?',185,1);
+INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (48,1,5,'¿Cuántas novelas publicó el escritor portugués-japonés Ryoki Inoue bajo sus mas de 20 pseudónimos?',189,1);
+INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (49,1,5,'¿Quién escribio Los vecinos mueren en las novelas?',193,1);
+INSERT INTO pregunta(id,idioma_id,categoria_id,descripcion,opcion_id_correcta,usuario_id) VALUES (50,1,5,'¿Cuál de los siguientes cuentos no escribió Julio Cortázar?',197,1);
+
+
+-- Preguntas_opcion (respuestas) categoria 5 Libros
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (41,'7 Libros',1);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (41,'6 Libros',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (41,'8 Libros',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (41,'5 Libros',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (42,'X',1);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (42,'XII',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (42,'XV',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (42,'XVII',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (43,'J. R. R. Tolkien',1);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (43,'C. S. Lewis',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (43,'William Shakespeare',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (43,'H. P. Lovecraft',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (44,'C. S. Lewis',1);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (44,'J. R. R. Tolkien',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (44,'Edgar Allan Poe',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (44,'Stephen King',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (45,'H. P. Lovecraft',1);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (45,'J. R. R. Tolkien',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (45,'C. S. Lewis',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (45,'Arthur Conan Doyle',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (46,'El misterioso caso de Styles',1);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (46,'Asesinato en el expreso de Oriente',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (46,'Diez negritos',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (46,'El asesinato de Roger Ackroyd',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (47,'El cuervo',1);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (47,'Drácula',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (47,'El resplandor',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (47,'El misterio de Salems Lot',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (48,'Más de mil',1);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (48,'Más de 100, menos de 150',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (48,'Más de 300, menos de 301',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (48,'Más de 20, menos de 30',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (49,'Sergio Aguirre',1);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (49,'Ricardo Piglia',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (49,'Roberto Artl',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (49,'Ernesto Sabato',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (50,'El escarabajo dorado',1);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (50,'Final del juego',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (50,'Las armas secretas',0);
+INSERT INTO pregunta_opcion(pregunta_id,descripcion_opcion,correcta) VALUES (50,'Todos los fuegos el fuego',0);
 
 
 SET IDENTITY_INSERT pregunta OFF;
