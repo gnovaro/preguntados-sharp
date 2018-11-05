@@ -44,11 +44,18 @@ namespace Presentacion.Formularios
                 MessageBox.Show("Por favor seleccione un idioma / Please choose a language");
             } else {
                 this._usuario.idioma = lang;
-
+                /*
                 MenuPrincipal frmMenu = new MenuPrincipal(this._usuario);
                 frmMenu.MdiParent = this.MdiParent;
                 frmMenu.Show();
-                this.Hide();
+                this.Hide(); */
+
+                //Esta parte para lanzar el login
+                 
+                Login frmLogin = new Login(this._usuario);
+                frmLogin.MdiParent = this.MdiParent;
+                frmLogin.Show();
+                this.Hide(); 
             }
 
         }
