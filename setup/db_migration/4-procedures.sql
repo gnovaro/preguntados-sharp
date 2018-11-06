@@ -1,5 +1,7 @@
+USE preguntados;
+
 --Se crea el procedimiento para el alta de usuarios, con un parametro id de salida
-ALTER PROCEDURE usuario_alta
+CREATE PROCEDURE usuario_alta
 (
 	 @nombre varchar(50),
 	 @email varchar(254),
@@ -29,7 +31,7 @@ BEGIN
 	INSERT INTO pregunta(idioma_id,categoria_id,descripcion,opcion_id_correcta, usuario_id)
 	VALUES(@idioma_id, @categoria_id, @descripcion, NULL, @usuario_id)
 	SET @id = SCOPE_IDENTITY()
-END
+END;
 
 
 --Se crea el procedimiento para el alta de una opcion , y obtener su id(me importa saber el id, para pasarselo a pregunta)
@@ -45,7 +47,7 @@ BEGIN
 	INSERT INTO pregunta_opcion(pregunta_id, descripcion_opcion, correcta)
 	VALUES(@pregunta_id, @descripcion_opcion, @correcta)
 	SET @id = SCOPE_IDENTITY()
-END
+END;
 
 
 --Se crea un procedimiento para setear el id de la opcion correcta dentro de la pregunta
@@ -59,7 +61,7 @@ BEGIN
 	UPDATE pregunta
 	SET opcion_id_correcta = @opcion_id_correcta
 	WHERE id = @id
-END
+END;
 
 
 --se crea un procedimiento para el alta de una respuesta
@@ -74,7 +76,7 @@ AS
 BEGIN
 	INSERT INTO respuesta(usuario_id, pregunta_id, pregunta_opcion_id, correctamente)
 	VALUES(@usuario_id, @pregunta_id, @pregunta_opcion_id, @correctamente)
-END
+END;
 
 
 --se crea un procedimiento para el alta de denuncia
@@ -89,4 +91,19 @@ AS
 BEGIN
 	INSERT INTO denuncia(usuario_id, pregunta_id, descripcion, fecha)
 	VALUES(@usuario_id, @pregunta_id, @descripcion, @fecha)
-END
+END;
+
+ALTER PROCEDURE ingreso
+(
+	@email VARCHAR(254),
+	@contrasena VARCHAR(50)
+)
+AS
+BEGIN
+	SET NOCOUNT ON
+	SET @contrasena = HASHBYTES('SHA2_256',CONCAT(@contrasena,'3$B4'))
+	SELECT * FROM usuario WHERE email = @email AND contrasena = @contrasena
+END;
+
+
+ EXECUTE ingreso @email = 'gnovaro@gmail.com', @contrasena='123456'
