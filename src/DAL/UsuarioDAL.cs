@@ -32,11 +32,16 @@ namespace DAL
             return filavalor;
         }
 
-        public DataTable obtenerUsuario(string email) 
+        public DataTable obtenerUsuario(string email, string contrasena) 
         {
             Conexion objConexion = new Conexion();
-            string consultaSql = "SELECT * FROM usuario WHERE email = '" + email + "'";
-            DataTable datausuario = objConexion.LeerPorComando(consultaSql);
+            string procedimiento = "ingreso";
+
+            SqlParameter[] parametros = new SqlParameter[2];
+            parametros[0] = objConexion.crearParametro("@email", email);
+            parametros[1] = objConexion.crearParametro("@contrasena", contrasena);
+
+            DataTable datausuario = objConexion.LeerPorStoreProcedure(procedimiento,parametros); ;
 
             return datausuario;
         }

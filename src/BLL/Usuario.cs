@@ -89,7 +89,7 @@ namespace BLL
         {
             bool valor = false;
             UsuarioDAL objusuariodal = new UsuarioDAL();
-            DataTable datausuario = objusuariodal.obtenerUsuario(this._email);
+            DataTable datausuario = objusuariodal.obtenerUsuario(this._email, this._contrasena);
 
             if (datausuario.Rows.Count > 0) 
             {
@@ -102,7 +102,6 @@ namespace BLL
                 userIdioma.id = Convert.ToInt32(rowusuario["idioma_id"]);
                 this._idioma = userIdioma;
                 this._puntos = Convert.ToInt32(rowusuario["puntos"]);
-                this._contrasena = rowusuario["contrasena"].ToString();
 
             }
             //devuelve false si el email que ingreso no trajo ningun usuario
