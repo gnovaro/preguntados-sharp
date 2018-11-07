@@ -27,12 +27,30 @@ namespace Presentacion.Formularios
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
-            //hacer la validacion de usuario
+            
+            if (txtEmail.Text != "" && txtContrasena.Text != "")
+            {
+                this._usuario.email = txtEmail.Text;
+                this._usuario.contrasena = txtContrasena.Text;
+                bool valor = this._usuario.obtenerUsuario();
 
-            MenuPrincipal frmMenu = new MenuPrincipal(this._usuario);
-            frmMenu.MdiParent = this.MdiParent;
-            frmMenu.Show();
-            this.Hide();
+                if (valor)
+                {
+                    MenuPrincipal frmMenu = new MenuPrincipal(this._usuario);
+                    frmMenu.MdiParent = this.MdiParent;
+                    frmMenu.Show();
+                    this.Hide();
+                }
+                else 
+                {
+                    MessageBox.Show("El email o la contraseña son incorrectos");
+                }
+            }
+            else 
+            {
+                MessageBox.Show("Debe completar todos los campos");
+            }
+            
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)

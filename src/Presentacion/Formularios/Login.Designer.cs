@@ -30,8 +30,8 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtEmail = new System.Windows.Forms.TextBox();
+            this.txtContrasena = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -54,19 +54,20 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Contraseña :";
             // 
-            // textBox1
+            // txtEmail
             // 
-            this.textBox1.Location = new System.Drawing.Point(108, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(124, 20);
-            this.textBox1.TabIndex = 2;
+            this.txtEmail.Location = new System.Drawing.Point(108, 57);
+            this.txtEmail.Name = "txtEmail";
+            this.txtEmail.Size = new System.Drawing.Size(124, 20);
+            this.txtEmail.TabIndex = 2;
             // 
-            // textBox2
+            // txtContrasena
             // 
-            this.textBox2.Location = new System.Drawing.Point(108, 101);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(124, 20);
-            this.textBox2.TabIndex = 3;
+            this.txtContrasena.Location = new System.Drawing.Point(108, 101);
+            this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
+            this.txtContrasena.Size = new System.Drawing.Size(124, 20);
+            this.txtContrasena.TabIndex = 3;
             // 
             // btnIngresar
             // 
@@ -95,8 +96,8 @@
             this.ClientSize = new System.Drawing.Size(316, 283);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtContrasena);
+            this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "Login";
@@ -110,8 +111,8 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtEmail;
+        private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnRegistrar;
     }

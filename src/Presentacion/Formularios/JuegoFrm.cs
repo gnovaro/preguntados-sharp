@@ -54,8 +54,6 @@ namespace Presentacion.Formularios
             Boolean respuesta = false;
             Respuesta laRespuesta = new Respuesta();
             laRespuesta.usuario = this._usuario;
-            //seteo su id en 1 para probar el alta
-            laRespuesta.usuario.id = 1;
             laRespuesta.pregunta = this.preguntaRandom;
 
             if (radOpcion1.Checked)
