@@ -51,14 +51,12 @@ namespace Presentacion.Formularios
 
                         if (rdbRespuesta1.Checked || rdbRespuesta2.Checked || rdbRespuesta3.Checked || rdbRespuesta4.Checked)
                         {
-                            unidioma.id = _usuario.idioma.id;
+                            unidioma.id = this._usuario.idioma.id;
                             unacategoria.id = Convert.ToInt32(cmbCategoria.SelectedValue);
-                            //Aca le seteo id del admin para probar 
-                            _usuario.id = 1;
-
+                            
                             unapregunta.idioma = unidioma;
                             unapregunta.categoria = unacategoria;
-                            unapregunta.creador = _usuario;
+                            unapregunta.creador = this._usuario;
                             unapregunta.descripcion = txtPregunta.Text;
                             unapregunta.alta();
 
