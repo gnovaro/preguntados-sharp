@@ -43,6 +43,7 @@
             this.btnAburrida.TabIndex = 0;
             this.btnAburrida.Text = "Aburrida";
             this.btnAburrida.UseVisualStyleBackColor = true;
+            this.btnAburrida.Click += new System.EventHandler(this.btnAburrida_Click);
             // 
             // btnContinuar
             // 
@@ -71,6 +72,7 @@
             this.btnDivertida.TabIndex = 4;
             this.btnDivertida.Text = "Divertida";
             this.btnDivertida.UseVisualStyleBackColor = true;
+            this.btnDivertida.Click += new System.EventHandler(this.btnDivertida_Click);
             // 
             // txtPregunta
             // 

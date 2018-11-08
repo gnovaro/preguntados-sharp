@@ -39,5 +39,24 @@ namespace Presentacion.Formularios
             frmMenu.Show();
             this.Close();
         }
+
+        private void btnAburrida_Click(object sender, EventArgs e)
+        {
+            this._preguntaRandom.votosNegativos = this._preguntaRandom.votosNegativos + 1;
+            this._preguntaRandom.guardarVotoNegativo();
+            btnAburrida.BackColor = Color.Red;
+            btnAburrida.Enabled = false;
+            btnDivertida.Enabled = false;
+
+        }
+
+        private void btnDivertida_Click(object sender, EventArgs e)
+        {
+            this._preguntaRandom.votosPositivos = this._preguntaRandom.votosPositivos + 1;
+            this._preguntaRandom.guardarVotoPositivo();
+            btnDivertida.BackColor = Color.Green;
+            btnAburrida.Enabled = false;
+            btnDivertida.Enabled = false;
+        }
     }
 }
