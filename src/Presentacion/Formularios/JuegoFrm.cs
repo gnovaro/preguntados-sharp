@@ -16,7 +16,7 @@ namespace Presentacion.Formularios
         protected Usuario _usuario;
         protected Pregunta preguntaRandom;
         protected List<Categoria> _categorias;
-
+        protected int _tiempo;
         public JuegoFrm()
         {
             InitializeComponent();
@@ -47,6 +47,11 @@ namespace Presentacion.Formularios
             radOpcion2.Text = this.preguntaRandom.opciones.ElementAt(1).descripcion;
             radOpcion3.Text = this.preguntaRandom.opciones.ElementAt(2).descripcion;
             radOpcion4.Text = this.preguntaRandom.opciones.ElementAt(3).descripcion;
+
+            this._tiempo = 30;
+            lblTiempo.Text = this._tiempo.ToString() ;
+            timer1.Interval = 1000;
+            timer1.Enabled = true;
         }
 
         private void btnResponderPregunta_Click(object sender, EventArgs e)
@@ -107,6 +112,22 @@ namespace Presentacion.Formularios
             
             //@TODO guardar la respuesta
             laRespuesta.alta();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if (this._tiempo > 0)
+            {
+                this._tiempo = this._tiempo - 1;
+                lblTiempo.Text = this._tiempo.ToString();
+            }
+            else 
+            {
+                timer1.Stop();
+                lblTiempo.Text = "Tiempo fuera";
+                btnResponderPregunta.Enabled = false;
+                MessageBox.Show("Se acabo el tiempo");
+            }
         }
     }
 }

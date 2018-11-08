@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JuegoFrm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCategoria = new System.Windows.Forms.Label();
             this.txtPregunta = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.radOpcion4 = new System.Windows.Forms.RadioButton();
@@ -39,7 +40,7 @@
             this.radOpcion1 = new System.Windows.Forms.RadioButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnResponderPregunta = new System.Windows.Forms.Button();
-            this.lblCategoria = new System.Windows.Forms.Label();
+            this.lblTiempo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -50,6 +51,11 @@
             this.panel1.Controls.Add(this.lblCategoria);
             resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
+            // 
+            // lblCategoria
+            // 
+            resources.ApplyResources(this.lblCategoria, "lblCategoria");
+            this.lblCategoria.Name = "lblCategoria";
             // 
             // txtPregunta
             // 
@@ -94,6 +100,10 @@
             this.radOpcion1.TabStop = true;
             this.radOpcion1.UseVisualStyleBackColor = true;
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // btnResponderPregunta
             // 
             resources.ApplyResources(this.btnResponderPregunta, "btnResponderPregunta");
@@ -101,15 +111,16 @@
             this.btnResponderPregunta.UseVisualStyleBackColor = true;
             this.btnResponderPregunta.Click += new System.EventHandler(this.btnResponderPregunta_Click);
             // 
-            // lblCategoria
+            // lblTiempo
             // 
-            resources.ApplyResources(this.lblCategoria, "lblCategoria");
-            this.lblCategoria.Name = "lblCategoria";
+            resources.ApplyResources(this.lblTiempo, "lblTiempo");
+            this.lblTiempo.Name = "lblTiempo";
             // 
             // JuegoFrm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblTiempo);
             this.Controls.Add(this.btnResponderPregunta);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtPregunta);
@@ -137,5 +148,6 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button btnResponderPregunta;
         private System.Windows.Forms.Label lblCategoria;
+        private System.Windows.Forms.Label lblTiempo;
     }
 }
