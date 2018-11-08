@@ -107,3 +107,16 @@ END;
 
 
  EXECUTE ingreso @email = 'gnovaro@gmail.com', @contrasena='123456'
+ 
+ --Se crea procedimiento para guardar los puntos del usuario
+ CREATE PROCEDURE usuario_guardarPuntos
+(
+	@id bigint,
+	@puntos int
+)
+AS
+BEGIN
+	UPDATE usuario
+	SET puntos = @puntos
+	WHERE id = @id
+END;
