@@ -45,5 +45,20 @@ namespace DAL
 
             return datausuario;
         }
+
+        public int guardarPuntos(int id, int puntos) 
+        {
+            Conexion objConexion = new Conexion();
+            string procedimiento = "usuario_guardarPuntos";
+            int filasafectadas;
+            SqlParameter[] parametros = new SqlParameter[2];
+
+            parametros[0] = objConexion.crearParametro("@id", id);
+            parametros[1] = objConexion.crearParametro("@puntos", puntos);
+
+            filasafectadas = objConexion.EscribirPorStoreProcedure(procedimiento, parametros);
+
+            return filasafectadas;
+        }
     }
 }

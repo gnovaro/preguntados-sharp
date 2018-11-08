@@ -108,5 +108,11 @@ namespace BLL
             return valor;
 
         }
+
+        public void guardarPuntos() 
+        {
+            UsuarioDAL objusuariodal = new UsuarioDAL();
+            objusuariodal.guardarPuntos(this._id, this._puntos);
+        }
     }
 }

@@ -60,6 +60,7 @@ namespace Presentacion.Formularios
             Respuesta laRespuesta = new Respuesta();
             laRespuesta.usuario = this._usuario;
             laRespuesta.pregunta = this.preguntaRandom;
+            timer1.Stop();
 
             if (radOpcion1.Checked)
             {
@@ -104,7 +105,10 @@ namespace Presentacion.Formularios
             if (respuesta) {
                 MessageBox.Show("Es correcta");
                 laRespuesta.correcta = 1;
-            } else
+                this._usuario.puntos = this._usuario.puntos + 10;
+                this._usuario.guardarPuntos();
+            } 
+            else
             {
                 MessageBox.Show("Su respuesta es incorrecta");
                 laRespuesta.correcta = 0;
