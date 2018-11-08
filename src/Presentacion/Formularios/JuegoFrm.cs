@@ -116,6 +116,10 @@ namespace Presentacion.Formularios
             
             //@TODO guardar la respuesta
             laRespuesta.alta();
+            Resultado frmResultado = new Resultado(this._usuario, this.preguntaRandom);
+            frmResultado.MdiParent = this.MdiParent;
+            frmResultado.Show();
+            this.Hide();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
