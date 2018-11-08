@@ -45,7 +45,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(517, 357);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.btnAtras);
             this.Name = "Ranking";
             this.Text = "Ranking";

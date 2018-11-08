@@ -107,7 +107,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 225);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.txtContrasena);
             this.Controls.Add(this.txtEmail);
             this.Controls.Add(this.txtNombre);

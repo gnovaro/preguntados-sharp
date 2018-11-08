@@ -57,7 +57,7 @@
             // 
             // btnDenunciar
             // 
-            this.btnDenunciar.Location = new System.Drawing.Point(253, 357);
+            this.btnDenunciar.Location = new System.Drawing.Point(353, 263);
             this.btnDenunciar.Name = "btnDenunciar";
             this.btnDenunciar.Size = new System.Drawing.Size(96, 23);
             this.btnDenunciar.TabIndex = 3;
@@ -89,7 +89,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(388, 405);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.txtPregunta);
             this.Controls.Add(this.btnDivertida);
             this.Controls.Add(this.btnDenunciar);
