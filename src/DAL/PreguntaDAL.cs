@@ -61,5 +61,36 @@ namespace DAL
 
             return filasafectadas;
         }
+
+        public int guardarVotoPositivo(int id, int voto) 
+        {
+            Conexion objconexion = new Conexion();
+            string procedimiento = "pregunta_guardarVotoPositivo";
+            int filasafectadas;
+
+            SqlParameter[] parametros = new SqlParameter[2];
+
+            parametros[0] = objconexion.crearParametro("@id", id);
+            parametros[1] = objconexion.crearParametro("@positivo", voto);
+            filasafectadas = objconexion.EscribirPorStoreProcedure(procedimiento, parametros);
+
+            return filasafectadas;
+        }
+
+        public int guardarVotoNegativo(int id, int voto) 
+        {
+            Conexion objconexion = new Conexion();
+            string procedimiento = "pregunta_guardarVotoNegativo";
+            int filasafectadas;
+
+            SqlParameter[] parametros = new SqlParameter[2];
+
+            parametros[0] = objconexion.crearParametro("@id", id);
+            parametros[1] = objconexion.crearParametro("@negativo", voto);
+            filasafectadas = objconexion.EscribirPorStoreProcedure(procedimiento, parametros);
+
+            return filasafectadas;
+        }
+
     }
 }

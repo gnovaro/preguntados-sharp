@@ -175,5 +175,17 @@ namespace BLL
 
             this.opciones = listaNueva;
         }
+
+        public void guardarVotoPositivo() 
+        {
+            PreguntaDAL objpreguntadal = new PreguntaDAL();
+            objpreguntadal.guardarVotoPositivo(this._id, this._votosPositivos);
+        }
+
+        public void guardarVotoNegativo() 
+        {
+            PreguntaDAL objpreguntadal = new PreguntaDAL();
+            objpreguntadal.guardarVotoNegativo(this._id, this._votosNegativos);
+        }
     }
 }
