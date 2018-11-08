@@ -120,3 +120,29 @@ BEGIN
 	SET puntos = @puntos
 	WHERE id = @id
 END;
+
+--Se crea el procedimiento para guardar los votos positivos de la pregunta
+ CREATE PROCEDURE pregunta_guardarVotoPositivo
+(
+	@id bigint,
+	@positivo bigint
+)
+AS
+BEGIN
+	UPDATE pregunta
+	SET votos_positivos = @positivo
+	WHERE id = @id
+END;
+
+--Se crea el procedimiento para guardar los votos negativos de la pregunta
+CREATE PROCEDURE pregunta_guardarVotoNegativo
+(
+	@id bigint,
+	@negativo bigint
+)
+AS
+BEGIN
+	UPDATE pregunta
+	SET votos_negativos = @negativo
+	WHERE id = @id
+END;
