@@ -55,14 +55,14 @@ namespace Presentacion.Formularios
                 Login frmLogin = new Login(this._usuario);
                 frmLogin.MdiParent = this.MdiParent;
                 frmLogin.Show();
-                this.Hide(); 
+                this.Close(); 
             }
 
         }
 
         private void IdiomaFrm_Load(object sender, EventArgs e)
         {
-
+            this.ControlBox = false;
         }
     }
 }

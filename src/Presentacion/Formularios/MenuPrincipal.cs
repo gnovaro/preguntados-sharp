@@ -28,6 +28,7 @@ namespace Presentacion.Formularios
 
         private void Menu_Load(object sender, EventArgs e)
         {
+            this.ControlBox = false;
             //Ingles
             if (this._usuario.idioma.id == 2)
             {
@@ -40,6 +41,7 @@ namespace Presentacion.Formularios
             JuegoFrm frmJuego = new JuegoFrm(this._usuario);
             frmJuego.MdiParent = this.MdiParent;
             frmJuego.Show();
+            this.Hide();
 
         }
 
@@ -48,7 +50,32 @@ namespace Presentacion.Formularios
             PreguntaFrm frmAgregarpregunta = new PreguntaFrm(this._usuario);
             frmAgregarpregunta.MdiParent = this.MdiParent;
             frmAgregarpregunta.Show();
+            this.Close();
 
+        }
+
+        private void btnPerfil_Click(object sender, EventArgs e)
+        {
+            Perfil frmPerfil = new Perfil(this._usuario);
+            frmPerfil.MdiParent = this.MdiParent;
+            frmPerfil.Show();
+            this.Close();
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            IdiomaFrm frmIdioma = new IdiomaFrm(this._usuario);
+            frmIdioma.MdiParent = this.MdiParent;
+            frmIdioma.Show();
+            this.Close();
+        }
+
+        private void btnRanking_Click(object sender, EventArgs e)
+        {
+            Ranking frmRanking = new Ranking(this._usuario);
+            frmRanking.MdiParent = this.MdiParent;
+            frmRanking.Show();
+            this.Close();
         }
     }
 }

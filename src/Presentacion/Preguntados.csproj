@@ -56,6 +56,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Formularios\Denuncia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Denuncia.Designer.cs">
+      <DependentUpon>Denuncia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\IdiomaFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,12 @@
     <Compile Include="Formularios\MenuPrincipal.Designer.cs">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\Perfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Perfil.Designer.cs">
+      <DependentUpon>Perfil.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\PreguntaFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +103,12 @@
     </Compile>
     <Compile Include="Formularios\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Ranking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Ranking.Designer.cs">
+      <DependentUpon>Ranking.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\Registro.cs">
       <SubType>Form</SubType>
@@ -112,6 +130,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Formularios\Denuncia.resx">
+      <DependentUpon>Denuncia.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\IdiomaFrm.resx">
       <DependentUpon>IdiomaFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,11 +145,17 @@
     <EmbeddedResource Include="Formularios\MenuPrincipal.resx">
       <DependentUpon>MenuPrincipal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Perfil.resx">
+      <DependentUpon>Perfil.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\PreguntaFrm.resx">
       <DependentUpon>PreguntaFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Ranking.resx">
+      <DependentUpon>Ranking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Registro.resx">
       <DependentUpon>Registro.cs</DependentUpon>

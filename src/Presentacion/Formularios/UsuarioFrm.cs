@@ -29,5 +29,10 @@ namespace Presentacion.Formularios
             unUsuario.alta();
 
         }
+
+        private void UsuarioFrm_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
+        }
     }
 }

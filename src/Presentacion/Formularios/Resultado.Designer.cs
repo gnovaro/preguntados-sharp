@@ -63,6 +63,7 @@
             this.btnDenunciar.TabIndex = 3;
             this.btnDenunciar.Text = "Denunciar";
             this.btnDenunciar.UseVisualStyleBackColor = true;
+            this.btnDenunciar.Click += new System.EventHandler(this.btnDenunciar_Click);
             // 
             // btnDivertida
             // 
@@ -76,10 +77,13 @@
             // 
             // txtPregunta
             // 
-            this.txtPregunta.Location = new System.Drawing.Point(70, 61);
+            this.txtPregunta.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtPregunta.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPregunta.Location = new System.Drawing.Point(60, 27);
+            this.txtPregunta.Multiline = true;
             this.txtPregunta.Name = "txtPregunta";
-            this.txtPregunta.Size = new System.Drawing.Size(257, 20);
-            this.txtPregunta.TabIndex = 5;
+            this.txtPregunta.Size = new System.Drawing.Size(235, 92);
+            this.txtPregunta.TabIndex = 2;
             // 
             // Resultado
             // 

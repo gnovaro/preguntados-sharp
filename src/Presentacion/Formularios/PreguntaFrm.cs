@@ -148,5 +148,18 @@ namespace Presentacion.Formularios
             
             
         }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            MenuPrincipal frmMenu = new MenuPrincipal(this._usuario);
+            frmMenu.MdiParent = this.MdiParent;
+            frmMenu.Show();
+            this.Close();
+        }
+
+        private void PreguntaFrm_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
+        }
     }
 }

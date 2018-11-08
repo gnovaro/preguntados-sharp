@@ -32,12 +32,13 @@
             this.btnPreguntaAgregar = new System.Windows.Forms.Button();
             this.btnPerfil = new System.Windows.Forms.Button();
             this.btnRanking = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnJugar
             // 
             this.btnJugar.Location = new System.Drawing.Point(179, 42);
-            this.btnJugar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnJugar.Margin = new System.Windows.Forms.Padding(2);
             this.btnJugar.Name = "btnJugar";
             this.btnJugar.Size = new System.Drawing.Size(212, 56);
             this.btnJugar.TabIndex = 0;
@@ -48,7 +49,7 @@
             // btnPreguntaAgregar
             // 
             this.btnPreguntaAgregar.Location = new System.Drawing.Point(179, 110);
-            this.btnPreguntaAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPreguntaAgregar.Margin = new System.Windows.Forms.Padding(2);
             this.btnPreguntaAgregar.Name = "btnPreguntaAgregar";
             this.btnPreguntaAgregar.Size = new System.Drawing.Size(212, 56);
             this.btnPreguntaAgregar.TabIndex = 1;
@@ -59,33 +60,46 @@
             // btnPerfil
             // 
             this.btnPerfil.Location = new System.Drawing.Point(179, 186);
-            this.btnPerfil.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnPerfil.Margin = new System.Windows.Forms.Padding(2);
             this.btnPerfil.Name = "btnPerfil";
             this.btnPerfil.Size = new System.Drawing.Size(212, 56);
             this.btnPerfil.TabIndex = 2;
             this.btnPerfil.Text = "Perfil";
             this.btnPerfil.UseVisualStyleBackColor = true;
+            this.btnPerfil.Click += new System.EventHandler(this.btnPerfil_Click);
             // 
             // btnRanking
             // 
             this.btnRanking.Location = new System.Drawing.Point(179, 259);
-            this.btnRanking.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRanking.Margin = new System.Windows.Forms.Padding(2);
             this.btnRanking.Name = "btnRanking";
             this.btnRanking.Size = new System.Drawing.Size(212, 56);
             this.btnRanking.TabIndex = 3;
             this.btnRanking.Text = "Ranking";
             this.btnRanking.UseVisualStyleBackColor = true;
+            this.btnRanking.Click += new System.EventHandler(this.btnRanking_Click);
+            // 
+            // btnAtras
+            // 
+            this.btnAtras.Location = new System.Drawing.Point(12, 292);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(75, 23);
+            this.btnAtras.TabIndex = 4;
+            this.btnAtras.Text = "Atrás";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // MenuPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnRanking);
             this.Controls.Add(this.btnPerfil);
             this.Controls.Add(this.btnPreguntaAgregar);
             this.Controls.Add(this.btnJugar);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MenuPrincipal";
             this.Text = "Menu Preguntados";
             this.Load += new System.EventHandler(this.Menu_Load);
@@ -99,5 +113,6 @@
         private System.Windows.Forms.Button btnPreguntaAgregar;
         private System.Windows.Forms.Button btnPerfil;
         private System.Windows.Forms.Button btnRanking;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

@@ -60,5 +60,18 @@ namespace Presentacion.Formularios
             frmRegistro.Show();
             this.Hide();
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
+        }
+
+        private void btnAtras_Click(object sender, EventArgs e)
+        {
+            IdiomaFrm frmIdioma = new IdiomaFrm(this._usuario);
+            frmIdioma.MdiParent = this.MdiParent;
+            frmIdioma.Show();
+            this.Close();
+        }
     }
 }

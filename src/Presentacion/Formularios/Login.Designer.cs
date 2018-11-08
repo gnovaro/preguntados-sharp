@@ -34,6 +34,7 @@
             this.txtContrasena = new System.Windows.Forms.TextBox();
             this.btnIngresar = new System.Windows.Forms.Button();
             this.btnRegistrar = new System.Windows.Forms.Button();
+            this.btnAtras = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -89,11 +90,22 @@
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
+            // btnAtras
+            // 
+            this.btnAtras.Location = new System.Drawing.Point(24, 238);
+            this.btnAtras.Name = "btnAtras";
+            this.btnAtras.Size = new System.Drawing.Size(75, 23);
+            this.btnAtras.TabIndex = 6;
+            this.btnAtras.Text = "Atrás";
+            this.btnAtras.UseVisualStyleBackColor = true;
+            this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(316, 283);
+            this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.btnIngresar);
             this.Controls.Add(this.txtContrasena);
@@ -102,6 +114,7 @@
             this.Controls.Add(this.label1);
             this.Name = "Login";
             this.Text = "Login";
+            this.Load += new System.EventHandler(this.Login_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,5 +128,6 @@
         private System.Windows.Forms.TextBox txtContrasena;
         private System.Windows.Forms.Button btnIngresar;
         private System.Windows.Forms.Button btnRegistrar;
+        private System.Windows.Forms.Button btnAtras;
     }
 }

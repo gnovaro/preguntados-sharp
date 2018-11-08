@@ -27,6 +27,9 @@ namespace Presentacion.Formularios
 
         private void btnCancelar_Click(object sender, EventArgs e)
         {
+            Login frmLogin = new Login(this._usuario);
+            frmLogin.MdiParent = this.MdiParent;
+            frmLogin.Show();
             this.Close();
         }
 
@@ -62,6 +65,11 @@ namespace Presentacion.Formularios
 
                 
             
+        }
+
+        private void Registro_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
         }
     }
 }

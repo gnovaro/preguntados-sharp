@@ -29,6 +29,7 @@ namespace Presentacion.Formularios
 
         private void Resultado_Load(object sender, EventArgs e)
         {
+            this.ControlBox = false;
             txtPregunta.Text = this._preguntaRandom.descripcion;
         }
 
@@ -57,6 +58,14 @@ namespace Presentacion.Formularios
             btnDivertida.BackColor = Color.Green;
             btnAburrida.Enabled = false;
             btnDivertida.Enabled = false;
+        }
+
+        private void btnDenunciar_Click(object sender, EventArgs e)
+        {
+            Denuncia frmDenuncia = new Denuncia(this._usuario, this._preguntaRandom);
+            frmDenuncia.MdiParent = this.MdiParent;
+            frmDenuncia.Show();
+            this.Close();
         }
     }
 }

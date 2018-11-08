@@ -32,6 +32,7 @@ namespace Presentacion.Formularios
 
         private void Juego_Load(object sender, EventArgs e)
         {
+            this.ControlBox = false;
             Random rnd = new Random();
             int categoriaIndice = rnd.Next(0,4); //Hacemos un random de categoria
             string categoriaNombre = this._categorias.ElementAt(categoriaIndice).nombre;
@@ -48,7 +49,7 @@ namespace Presentacion.Formularios
             radOpcion3.Text = this.preguntaRandom.opciones.ElementAt(2).descripcion;
             radOpcion4.Text = this.preguntaRandom.opciones.ElementAt(3).descripcion;
 
-            this._tiempo = 30;
+            this._tiempo = 10;
             lblTiempo.Text = this._tiempo.ToString() ;
             timer1.Interval = 1000;
             timer1.Enabled = true;
@@ -135,6 +136,12 @@ namespace Presentacion.Formularios
                 lblTiempo.Text = "Tiempo fuera";
                 btnResponderPregunta.Enabled = false;
                 MessageBox.Show("Se acabo el tiempo");
+                Resultado frmResultado = new Resultado(this._usuario, this.preguntaRandom);
+                frmResultado.MdiParent = this.MdiParent;
+                frmResultado.Show();
+                this.Hide();
+
+
             }
         }
     }
