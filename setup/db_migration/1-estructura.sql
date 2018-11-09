@@ -201,7 +201,7 @@ FK_respuesta_pregunta_opcion FOREIGN KEY
 -- Creamos tabla denuncia
 CREATE TABLE denuncia
 (
-	id int NOT NULL,
+	id bigint NOT NULL IDENTITY(1,1),
 	usuario_id bigint NOT NULL,
 	pregunta_id bigint NOT NULL,
 	descripcion varchar(255) NOT NULL,
