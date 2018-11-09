@@ -62,7 +62,7 @@ namespace Presentacion.Formularios
 
         private void btnDenunciar_Click(object sender, EventArgs e)
         {
-            Denuncia frmDenuncia = new Denuncia(this._usuario, this._preguntaRandom);
+            DenunciaFrm frmDenuncia = new DenunciaFrm(this._usuario, this._preguntaRandom);
             frmDenuncia.MdiParent = this.MdiParent;
             frmDenuncia.Show();
             this.Close();

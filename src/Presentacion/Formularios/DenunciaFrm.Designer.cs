@@ -1,6 +1,6 @@
 ﻿namespace Presentacion.Formularios
 {
-    partial class Denuncia
+    partial class DenunciaFrm
     {
         /// <summary>
         /// Required designer variable.
@@ -42,6 +42,7 @@
             this.btnGuardar.TabIndex = 1;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtdenuncia
             // 
@@ -73,7 +74,7 @@
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
-            // Denuncia
+            // DenunciaFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -82,7 +83,7 @@
             this.Controls.Add(this.lbldenuncia);
             this.Controls.Add(this.txtdenuncia);
             this.Controls.Add(this.btnGuardar);
-            this.Name = "Denuncia";
+            this.Name = "DenunciaFrm";
             this.Text = "Denuncia";
             this.Load += new System.EventHandler(this.Denuncia_Load);
             this.ResumeLayout(false);

@@ -56,11 +56,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Formularios\Denuncia.cs">
+    <Compile Include="Formularios\DenunciaFrm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\Denuncia.Designer.cs">
-      <DependentUpon>Denuncia.cs</DependentUpon>
+    <Compile Include="Formularios\DenunciaFrm.Designer.cs">
+      <DependentUpon>DenunciaFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\IdiomaFrm.cs">
       <SubType>Form</SubType>
@@ -130,8 +130,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Formularios\Denuncia.resx">
-      <DependentUpon>Denuncia.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\DenunciaFrm.resx">
+      <DependentUpon>DenunciaFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\IdiomaFrm.resx">
       <DependentUpon>IdiomaFrm.cs</DependentUpon>
