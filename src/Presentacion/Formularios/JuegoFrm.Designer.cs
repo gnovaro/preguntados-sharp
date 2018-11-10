@@ -41,6 +41,10 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.btnResponderPregunta = new System.Windows.Forms.Button();
             this.lblTiempo = new System.Windows.Forms.Label();
+            this.btnOp1 = new System.Windows.Forms.Button();
+            this.btnOp2 = new System.Windows.Forms.Button();
+            this.btnOp3 = new System.Windows.Forms.Button();
+            this.btnOp4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -116,10 +120,42 @@
             resources.ApplyResources(this.lblTiempo, "lblTiempo");
             this.lblTiempo.Name = "lblTiempo";
             // 
+            // btnOp1
+            // 
+            resources.ApplyResources(this.btnOp1, "btnOp1");
+            this.btnOp1.Name = "btnOp1";
+            this.btnOp1.UseVisualStyleBackColor = true;
+            this.btnOp1.Click += new System.EventHandler(this.btnOp1_Click);
+            // 
+            // btnOp2
+            // 
+            resources.ApplyResources(this.btnOp2, "btnOp2");
+            this.btnOp2.Name = "btnOp2";
+            this.btnOp2.UseVisualStyleBackColor = true;
+            this.btnOp2.Click += new System.EventHandler(this.btnOp2_Click);
+            // 
+            // btnOp3
+            // 
+            resources.ApplyResources(this.btnOp3, "btnOp3");
+            this.btnOp3.Name = "btnOp3";
+            this.btnOp3.UseVisualStyleBackColor = true;
+            this.btnOp3.Click += new System.EventHandler(this.btnOp3_Click);
+            // 
+            // btnOp4
+            // 
+            resources.ApplyResources(this.btnOp4, "btnOp4");
+            this.btnOp4.Name = "btnOp4";
+            this.btnOp4.UseVisualStyleBackColor = true;
+            this.btnOp4.Click += new System.EventHandler(this.btnOp4_Click);
+            // 
             // JuegoFrm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btnOp4);
+            this.Controls.Add(this.btnOp3);
+            this.Controls.Add(this.btnOp2);
+            this.Controls.Add(this.btnOp1);
             this.Controls.Add(this.lblTiempo);
             this.Controls.Add(this.btnResponderPregunta);
             this.Controls.Add(this.panel2);
@@ -149,5 +185,9 @@
         private System.Windows.Forms.Button btnResponderPregunta;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Label lblTiempo;
+        private System.Windows.Forms.Button btnOp1;
+        private System.Windows.Forms.Button btnOp2;
+        private System.Windows.Forms.Button btnOp3;
+        private System.Windows.Forms.Button btnOp4;
     }
 }

@@ -48,6 +48,11 @@ namespace Presentacion.Formularios
             radOpcion2.Text = this.preguntaRandom.opciones.ElementAt(1).descripcion;
             radOpcion3.Text = this.preguntaRandom.opciones.ElementAt(2).descripcion;
             radOpcion4.Text = this.preguntaRandom.opciones.ElementAt(3).descripcion;
+            // Carga para usar con botones
+            btnOp1.Text = this.preguntaRandom.opciones.ElementAt(0).descripcion;
+            btnOp2.Text = this.preguntaRandom.opciones.ElementAt(1).descripcion;
+            btnOp3.Text = this.preguntaRandom.opciones.ElementAt(2).descripcion;
+            btnOp4.Text = this.preguntaRandom.opciones.ElementAt(3).descripcion;
 
             this._tiempo = 10;
             lblTiempo.Text = this._tiempo.ToString() ;
@@ -143,6 +148,174 @@ namespace Presentacion.Formularios
 
 
             }
+        }
+
+        private void btnOp1_Click(object sender, EventArgs e)
+        {
+            Respuesta unaRespuesta = new Respuesta();
+            unaRespuesta.opcion = this.preguntaRandom.opciones.ElementAt(0);
+            unaRespuesta.usuario = this._usuario;
+            unaRespuesta.pregunta = this.preguntaRandom;
+            unaRespuesta.correcta = this.preguntaRandom.opciones.ElementAt(0).correcta;
+            timer1.Stop();
+
+            if (this.preguntaRandom.opciones.ElementAt(0).correcta == 1)
+            {
+                btnOp1.BackColor = Color.Green;
+                this._usuario.puntos = this._usuario.puntos + 10;
+                this._usuario.guardarPuntos();
+                MessageBox.Show("Es correcta");
+            }
+            else 
+            {
+                btnOp1.BackColor = Color.Red;
+
+                if (this.preguntaRandom.opciones.ElementAt(1).correcta == 1)
+                {
+                    btnOp2.BackColor = Color.Green;
+                }
+                else if (this.preguntaRandom.opciones.ElementAt(2).correcta == 1)
+                {
+                    btnOp3.BackColor = Color.Green;
+                }
+                else 
+                {
+                    btnOp4.BackColor = Color.Green;
+                }
+                MessageBox.Show("Es incorrecta");
+            }
+
+            unaRespuesta.alta();
+            Resultado frmResultado = new Resultado(this._usuario, this.preguntaRandom);
+            frmResultado.MdiParent = this.MdiParent;
+            frmResultado.Show();
+            this.Close();
+        }
+
+        private void btnOp2_Click(object sender, EventArgs e)
+        {
+            Respuesta unaRespuesta = new Respuesta();
+            unaRespuesta.opcion = this.preguntaRandom.opciones.ElementAt(1);
+            unaRespuesta.usuario = this._usuario;
+            unaRespuesta.pregunta = this.preguntaRandom;
+            unaRespuesta.correcta = this.preguntaRandom.opciones.ElementAt(1).correcta;
+            timer1.Stop();
+
+            if (this.preguntaRandom.opciones.ElementAt(1).correcta == 1)
+            {
+                btnOp2.BackColor = Color.Green;
+                this._usuario.puntos = this._usuario.puntos + 10;
+                this._usuario.guardarPuntos();
+                MessageBox.Show("Es correcta");
+            }
+            else
+            {
+                btnOp2.BackColor = Color.Red;
+
+                if (this.preguntaRandom.opciones.ElementAt(0).correcta == 1)
+                {
+                    btnOp1.BackColor = Color.Green;
+                }
+                else if (this.preguntaRandom.opciones.ElementAt(2).correcta == 1)
+                {
+                    btnOp3.BackColor = Color.Green;
+                }
+                else
+                {
+                    btnOp4.BackColor = Color.Green;
+                }
+                MessageBox.Show("Es incorrecta");
+            }
+
+            unaRespuesta.alta();
+            Resultado frmResultado = new Resultado(this._usuario, this.preguntaRandom);
+            frmResultado.MdiParent = this.MdiParent;
+            frmResultado.Show();
+            this.Close();
+        }
+
+        private void btnOp3_Click(object sender, EventArgs e)
+        {
+            Respuesta unaRespuesta = new Respuesta();
+            unaRespuesta.opcion = this.preguntaRandom.opciones.ElementAt(2);
+            unaRespuesta.usuario = this._usuario;
+            unaRespuesta.pregunta = this.preguntaRandom;
+            unaRespuesta.correcta = this.preguntaRandom.opciones.ElementAt(2).correcta;
+            timer1.Stop();
+
+            if (this.preguntaRandom.opciones.ElementAt(2).correcta == 1)
+            {
+                btnOp3.BackColor = Color.Green;
+                this._usuario.puntos = this._usuario.puntos + 10;
+                this._usuario.guardarPuntos();
+                MessageBox.Show("Es correcta");
+            }
+            else
+            {
+                btnOp3.BackColor = Color.Red;
+
+                if (this.preguntaRandom.opciones.ElementAt(0).correcta == 1)
+                {
+                    btnOp1.BackColor = Color.Green;
+                }
+                else if (this.preguntaRandom.opciones.ElementAt(1).correcta == 1)
+                {
+                    btnOp2.BackColor = Color.Green;
+                }
+                else
+                {
+                    btnOp4.BackColor = Color.Green;
+                }
+                MessageBox.Show("Es incorrecta");
+            }
+
+            unaRespuesta.alta();
+            Resultado frmResultado = new Resultado(this._usuario, this.preguntaRandom);
+            frmResultado.MdiParent = this.MdiParent;
+            frmResultado.Show();
+            this.Close();
+        }
+
+        private void btnOp4_Click(object sender, EventArgs e)
+        {
+            Respuesta unaRespuesta = new Respuesta();
+            unaRespuesta.opcion = this.preguntaRandom.opciones.ElementAt(3);
+            unaRespuesta.usuario = this._usuario;
+            unaRespuesta.pregunta = this.preguntaRandom;
+            unaRespuesta.correcta = this.preguntaRandom.opciones.ElementAt(3).correcta;
+            timer1.Stop();
+
+            if (this.preguntaRandom.opciones.ElementAt(3).correcta == 1)
+            {
+                btnOp4.BackColor = Color.Green;
+                this._usuario.puntos = this._usuario.puntos + 10;
+                this._usuario.guardarPuntos();
+                MessageBox.Show("Es correcta");
+            }
+            else
+            {
+                btnOp4.BackColor = Color.Red;
+
+                if (this.preguntaRandom.opciones.ElementAt(0).correcta == 1)
+                {
+                    btnOp1.BackColor = Color.Green;
+                }
+                else if (this.preguntaRandom.opciones.ElementAt(1).correcta == 1)
+                {
+                    btnOp2.BackColor = Color.Green;
+                }
+                else
+                {
+                    btnOp3.BackColor = Color.Green;
+                }
+                MessageBox.Show("Es incorrecta");
+            }
+
+            unaRespuesta.alta();
+            Resultado frmResultado = new Resultado(this._usuario, this.preguntaRandom);
+            frmResultado.MdiParent = this.MdiParent;
+            frmResultado.Show();
+            this.Close();
         }
     }
 }
