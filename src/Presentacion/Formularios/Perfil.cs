@@ -32,6 +32,7 @@ namespace Presentacion.Formularios
         private void Perfil_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
+            txtPoints.Text = this._usuario.puntos.ToString();
         }
 
         private void button1_Click(object sender, EventArgs e)
