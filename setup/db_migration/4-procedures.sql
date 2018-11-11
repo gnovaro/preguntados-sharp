@@ -93,7 +93,7 @@ BEGIN
 	VALUES(@usuario_id, @pregunta_id, @descripcion, @fecha)
 END;
 
-ALTER PROCEDURE ingreso
+CREATE PROCEDURE ingreso
 (
 	@email VARCHAR(254),
 	@contrasena VARCHAR(50)
@@ -106,7 +106,7 @@ BEGIN
 END;
 
 
- EXECUTE ingreso @email = 'gnovaro@gmail.com', @contrasena='123456'
+ -- EXECUTE ingreso @email = 'gnovaro@gmail.com', @contrasena='123456'
  
  --Se crea procedimiento para guardar los puntos del usuario
  CREATE PROCEDURE usuario_guardarPuntos
