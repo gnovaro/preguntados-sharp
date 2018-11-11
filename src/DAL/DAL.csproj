@@ -57,6 +57,7 @@
     <Compile Include="Conexion.cs" />
     <Compile Include="DenunciaDAL.cs" />
     <Compile Include="IdiomaDAL.cs" />
+    <Compile Include="JuegoDAL.cs" />
     <Compile Include="OpcionDAL.cs" />
     <Compile Include="PreguntaDAL.cs" />
     <Compile Include="ProductoDAL.cs" />

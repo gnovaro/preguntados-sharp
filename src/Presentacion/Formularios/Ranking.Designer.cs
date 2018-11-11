@@ -30,12 +30,14 @@
         {
             this.btnAtras = new System.Windows.Forms.Button();
             this.lblRanking = new System.Windows.Forms.Label();
+            this.gvRanking = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.gvRanking)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(356, 354);
-            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAtras.Location = new System.Drawing.Point(354, 390);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4);
             this.btnAtras.Name = "btnAtras";
             this.btnAtras.Size = new System.Drawing.Size(100, 28);
             this.btnAtras.TabIndex = 7;
@@ -52,17 +54,28 @@
             this.lblRanking.TabIndex = 8;
             this.lblRanking.Text = "Ranking mejores jugadores";
             // 
+            // gvRanking
+            // 
+            this.gvRanking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gvRanking.Location = new System.Drawing.Point(207, 63);
+            this.gvRanking.Name = "gvRanking";
+            this.gvRanking.RowTemplate.Height = 24;
+            this.gvRanking.Size = new System.Drawing.Size(414, 294);
+            this.gvRanking.TabIndex = 9;
+            // 
             // Ranking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.gvRanking);
             this.Controls.Add(this.lblRanking);
             this.Controls.Add(this.btnAtras);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Ranking";
             this.Text = "Ranking";
             this.Load += new System.EventHandler(this.Ranking_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.gvRanking)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -72,5 +85,6 @@
 
         private System.Windows.Forms.Button btnAtras;
         private System.Windows.Forms.Label lblRanking;
+        private System.Windows.Forms.DataGridView gvRanking;
     }
 }

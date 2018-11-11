@@ -35,6 +35,10 @@ namespace Presentacion.Formularios
         private void Ranking_Load(object sender, EventArgs e)
         {
             this.ControlBox = false;
+            DataTable rankingData;
+            Juego juego = new BLL.Juego();
+            rankingData = juego.obtenerRanking();
+            gvRanking.DataSource = rankingData;
         }
 
         private void btnAtras_Click(object sender, EventArgs e)
