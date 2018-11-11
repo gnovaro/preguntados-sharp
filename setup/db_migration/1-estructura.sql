@@ -2,7 +2,7 @@
  * Preguntados ESTRUCTURA SQL
  * ESBA
  * GRUPO 1: Novaro, Sumi, Guido, Rodriguez
- * @version: 1.0.9
+ * @version: 1.0.10
  */
 -- Creamos la base de datos
 CREATE DATABASE preguntados;
@@ -19,9 +19,7 @@ CREATE TABLE idioma
 );
 
 -- Creamos LA PK sobre la columna id
-ALTER TABLE idioma 
-ADD CONSTRAINT PK_idioma 
-PRIMARY KEY (id);
+ALTER TABLE idioma ADD CONSTRAINT PK_idioma PRIMARY KEY (id);
 
 --habilitamos permitir especificar id
 SET IDENTITY_INSERT idioma ON;
@@ -100,7 +98,7 @@ CREATE TABLE pregunta
 	id bigint NOT NULL IDENTITY(1,1), 
 	idioma_id int NOT NULL,
 	categoria_id int NOT NULL,
-	descripcion varchar(100) NOT NULL,
+	descripcion varchar(150) NOT NULL,
 	opcion_id_correcta bigint NOT NULL,
 	votos_positivos bigint NOT NULL default 0,
 	votos_negativos bigint NOT NULL default 0,
