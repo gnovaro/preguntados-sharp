@@ -38,6 +38,7 @@
             this.dtpFechanac = new System.Windows.Forms.DateTimePicker();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -83,7 +84,7 @@
             // txtNombre
             // 
             this.txtNombre.Location = new System.Drawing.Point(335, 79);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(197, 22);
             this.txtNombre.TabIndex = 4;
@@ -91,7 +92,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(335, 132);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(197, 22);
             this.txtEmail.TabIndex = 5;
@@ -99,8 +100,9 @@
             // txtContrasena
             // 
             this.txtContrasena.Location = new System.Drawing.Point(335, 183);
-            this.txtContrasena.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContrasena.Margin = new System.Windows.Forms.Padding(4);
             this.txtContrasena.Name = "txtContrasena";
+            this.txtContrasena.PasswordChar = '*';
             this.txtContrasena.Size = new System.Drawing.Size(197, 22);
             this.txtContrasena.TabIndex = 6;
             // 
@@ -108,7 +110,7 @@
             // 
             this.dtpFechanac.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtpFechanac.Location = new System.Drawing.Point(335, 229);
-            this.dtpFechanac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFechanac.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFechanac.Name = "dtpFechanac";
             this.dtpFechanac.Size = new System.Drawing.Size(197, 22);
             this.dtpFechanac.TabIndex = 8;
@@ -116,7 +118,7 @@
             // btnAceptar
             // 
             this.btnAceptar.Location = new System.Drawing.Point(413, 324);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(119, 38);
             this.btnAceptar.TabIndex = 9;
@@ -127,7 +129,7 @@
             // btnCancelar
             // 
             this.btnCancelar.Location = new System.Drawing.Point(286, 324);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(119, 38);
             this.btnCancelar.TabIndex = 10;
@@ -135,11 +137,21 @@
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(176, 32);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(61, 17);
+            this.label5.TabIndex = 11;
+            this.label5.Text = "Registro";
+            // 
             // Registro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.dtpFechanac);
@@ -150,7 +162,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Registro";
             this.Text = "Registro";
             this.Load += new System.EventHandler(this.Registro_Load);
@@ -171,5 +183,6 @@
         private System.Windows.Forms.DateTimePicker dtpFechanac;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label label5;
     }
 }

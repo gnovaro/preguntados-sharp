@@ -45,6 +45,7 @@
             this.btnOp2 = new System.Windows.Forms.Button();
             this.btnOp3 = new System.Windows.Forms.Button();
             this.btnOp4 = new System.Windows.Forms.Button();
+            this.lblTimeLegend = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -148,10 +149,16 @@
             this.btnOp4.UseVisualStyleBackColor = true;
             this.btnOp4.Click += new System.EventHandler(this.btnOp4_Click);
             // 
+            // lblTimeLegend
+            // 
+            resources.ApplyResources(this.lblTimeLegend, "lblTimeLegend");
+            this.lblTimeLegend.Name = "lblTimeLegend";
+            // 
             // JuegoFrm
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lblTimeLegend);
             this.Controls.Add(this.btnOp4);
             this.Controls.Add(this.btnOp3);
             this.Controls.Add(this.btnOp2);
@@ -189,5 +196,6 @@
         private System.Windows.Forms.Button btnOp2;
         private System.Windows.Forms.Button btnOp3;
         private System.Windows.Forms.Button btnOp4;
+        private System.Windows.Forms.Label lblTimeLegend;
     }
 }

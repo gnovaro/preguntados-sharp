@@ -59,7 +59,10 @@
             this.gvRanking.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gvRanking.Location = new System.Drawing.Point(207, 63);
             this.gvRanking.Name = "gvRanking";
+            this.gvRanking.ReadOnly = true;
             this.gvRanking.RowTemplate.Height = 24;
+            this.gvRanking.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.gvRanking.ShowEditingIcon = false;
             this.gvRanking.Size = new System.Drawing.Size(414, 294);
             this.gvRanking.TabIndex = 9;
             // 

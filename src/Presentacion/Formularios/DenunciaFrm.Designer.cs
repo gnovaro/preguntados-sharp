@@ -36,11 +36,12 @@
             // 
             // btnGuardar
             // 
-            this.btnGuardar.Location = new System.Drawing.Point(187, 173);
+            this.btnGuardar.Location = new System.Drawing.Point(278, 234);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(109, 48);
+            this.btnGuardar.Size = new System.Drawing.Size(114, 36);
             this.btnGuardar.TabIndex = 1;
-            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.Text = "Enviar";
             this.btnGuardar.UseVisualStyleBackColor = true;
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
@@ -48,27 +49,29 @@
             // 
             this.txtdenuncia.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtdenuncia.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.txtdenuncia.Location = new System.Drawing.Point(111, 51);
-            this.txtdenuncia.Margin = new System.Windows.Forms.Padding(2);
+            this.txtdenuncia.Location = new System.Drawing.Point(79, 61);
+            this.txtdenuncia.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.txtdenuncia.Multiline = true;
             this.txtdenuncia.Name = "txtdenuncia";
-            this.txtdenuncia.Size = new System.Drawing.Size(235, 92);
+            this.txtdenuncia.Size = new System.Drawing.Size(313, 113);
             this.txtdenuncia.TabIndex = 2;
             // 
             // lbldenuncia
             // 
             this.lbldenuncia.AutoSize = true;
-            this.lbldenuncia.Location = new System.Drawing.Point(108, 26);
+            this.lbldenuncia.Location = new System.Drawing.Point(75, 30);
+            this.lbldenuncia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbldenuncia.Name = "lbldenuncia";
-            this.lbldenuncia.Size = new System.Drawing.Size(103, 13);
+            this.lbldenuncia.Size = new System.Drawing.Size(136, 17);
             this.lbldenuncia.TabIndex = 3;
             this.lbldenuncia.Text = "Ingrese su denuncia";
             // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(616, 405);
+            this.btnAtras.Location = new System.Drawing.Point(78, 234);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(68, 29);
+            this.btnAtras.Size = new System.Drawing.Size(91, 36);
             this.btnAtras.TabIndex = 4;
             this.btnAtras.Text = "Atras";
             this.btnAtras.UseVisualStyleBackColor = true;
@@ -76,13 +79,14 @@
             // 
             // DenunciaFrm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(538, 328);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.lbldenuncia);
             this.Controls.Add(this.txtdenuncia);
             this.Controls.Add(this.btnGuardar);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "DenunciaFrm";
             this.Text = "Denuncia";
             this.Load += new System.EventHandler(this.Denuncia_Load);

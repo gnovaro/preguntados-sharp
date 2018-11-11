@@ -37,10 +37,10 @@
             // 
             // btnJugar
             // 
-            this.btnJugar.Location = new System.Drawing.Point(179, 42);
-            this.btnJugar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnJugar.Location = new System.Drawing.Point(239, 52);
+            this.btnJugar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnJugar.Name = "btnJugar";
-            this.btnJugar.Size = new System.Drawing.Size(212, 56);
+            this.btnJugar.Size = new System.Drawing.Size(283, 69);
             this.btnJugar.TabIndex = 0;
             this.btnJugar.Text = "Jugar";
             this.btnJugar.UseVisualStyleBackColor = true;
@@ -48,10 +48,10 @@
             // 
             // btnPreguntaAgregar
             // 
-            this.btnPreguntaAgregar.Location = new System.Drawing.Point(179, 110);
-            this.btnPreguntaAgregar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPreguntaAgregar.Location = new System.Drawing.Point(239, 135);
+            this.btnPreguntaAgregar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPreguntaAgregar.Name = "btnPreguntaAgregar";
-            this.btnPreguntaAgregar.Size = new System.Drawing.Size(212, 56);
+            this.btnPreguntaAgregar.Size = new System.Drawing.Size(283, 69);
             this.btnPreguntaAgregar.TabIndex = 1;
             this.btnPreguntaAgregar.Text = "Agregar pregunta";
             this.btnPreguntaAgregar.UseVisualStyleBackColor = true;
@@ -59,10 +59,10 @@
             // 
             // btnPerfil
             // 
-            this.btnPerfil.Location = new System.Drawing.Point(179, 186);
-            this.btnPerfil.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPerfil.Location = new System.Drawing.Point(239, 229);
+            this.btnPerfil.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnPerfil.Name = "btnPerfil";
-            this.btnPerfil.Size = new System.Drawing.Size(212, 56);
+            this.btnPerfil.Size = new System.Drawing.Size(283, 69);
             this.btnPerfil.TabIndex = 2;
             this.btnPerfil.Text = "Perfil";
             this.btnPerfil.UseVisualStyleBackColor = true;
@@ -70,10 +70,10 @@
             // 
             // btnRanking
             // 
-            this.btnRanking.Location = new System.Drawing.Point(179, 259);
-            this.btnRanking.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRanking.Location = new System.Drawing.Point(239, 319);
+            this.btnRanking.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRanking.Name = "btnRanking";
-            this.btnRanking.Size = new System.Drawing.Size(212, 56);
+            this.btnRanking.Size = new System.Drawing.Size(283, 69);
             this.btnRanking.TabIndex = 3;
             this.btnRanking.Text = "Ranking";
             this.btnRanking.UseVisualStyleBackColor = true;
@@ -81,25 +81,26 @@
             // 
             // btnAtras
             // 
-            this.btnAtras.Location = new System.Drawing.Point(12, 292);
+            this.btnAtras.Location = new System.Drawing.Point(239, 409);
+            this.btnAtras.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAtras.Name = "btnAtras";
-            this.btnAtras.Size = new System.Drawing.Size(75, 23);
+            this.btnAtras.Size = new System.Drawing.Size(283, 68);
             this.btnAtras.TabIndex = 4;
-            this.btnAtras.Text = "Atrás";
+            this.btnAtras.Text = "Cerrar sesiòn";
             this.btnAtras.UseVisualStyleBackColor = true;
             this.btnAtras.Click += new System.EventHandler(this.btnAtras_Click);
             // 
             // MenuPrincipal
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(840, 537);
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnRanking);
             this.Controls.Add(this.btnPerfil);
             this.Controls.Add(this.btnPreguntaAgregar);
             this.Controls.Add(this.btnJugar);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MenuPrincipal";
             this.Text = "Menu Preguntados";
             this.Load += new System.EventHandler(this.Menu_Load);

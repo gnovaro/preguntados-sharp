@@ -54,7 +54,7 @@ namespace Presentacion.Formularios
             btnOp3.Text = this.preguntaRandom.opciones.ElementAt(2).descripcion;
             btnOp4.Text = this.preguntaRandom.opciones.ElementAt(3).descripcion;
 
-            this._tiempo = 10;
+            this._tiempo = 15;
             lblTiempo.Text = this._tiempo.ToString() ;
             timer1.Interval = 1000;
             timer1.Enabled = true;
