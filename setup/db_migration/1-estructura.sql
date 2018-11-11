@@ -2,7 +2,7 @@
  * Preguntados ESTRUCTURA SQL
  * ESBA
  * GRUPO 1: Novaro, Sumi, Guido, Rodriguez
- * @version: 1.0.10
+ * @version: 1.0.11
  */
 -- Creamos la base de datos
 CREATE DATABASE preguntados;
@@ -54,8 +54,8 @@ SET IDENTITY_INSERT usuario ON;
  * Con la contraseña: 4dm1n% con el salt '3$B4' 
   * Concatenado al final del password y hasheado el resultado de la concatenacion en sha256
 */
-INSERT INTO usuario(id,nombre,email,idioma_id,contrasena) 
-VALUES(1,'Admin','grupo1@esba.com.ar',1,HASHBYTES('SHA2_256','4dm1n%3$B4'));--Pass: 4m1n% Salt: 3$B4
+INSERT INTO usuario(id,nombre,email,idioma_id,contrasena,fecha_nac) 
+VALUES(1,'Admin','grupo1@esba.com.ar',1,HASHBYTES('SHA2_256',CONCAT('4dm1n%','3$B4')),"1980-01-01"); --Pass: 4m1n% Salt: 3$B4
 
 --habilitamos el autoicremental nuevamente
 SET IDENTITY_INSERT usuario OFF;
