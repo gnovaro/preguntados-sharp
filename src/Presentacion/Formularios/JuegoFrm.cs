@@ -34,7 +34,7 @@ namespace Presentacion.Formularios
         {
             this.ControlBox = false;
             Random rnd = new Random();
-            int categoriaIndice = rnd.Next(0,4); //Hacemos un random de categoria
+            int categoriaIndice = rnd.Next(0,5); //Hacemos un random de categoria
             string categoriaNombre = this._categorias.ElementAt(categoriaIndice).nombre;
 
             lblCategoria.Text = categoriaNombre;
@@ -43,11 +43,7 @@ namespace Presentacion.Formularios
             txtPregunta.Text = this.preguntaRandom.descripcion;
             //desordeno la lista de opciones
             this.preguntaRandom.desordenarOpciones();
-            //Cargamos las opciones
-            radOpcion1.Text = this.preguntaRandom.opciones.ElementAt(0).descripcion;
-            radOpcion2.Text = this.preguntaRandom.opciones.ElementAt(1).descripcion;
-            radOpcion3.Text = this.preguntaRandom.opciones.ElementAt(2).descripcion;
-            radOpcion4.Text = this.preguntaRandom.opciones.ElementAt(3).descripcion;
+
             // Carga para usar con botones
             btnOp1.Text = this.preguntaRandom.opciones.ElementAt(0).descripcion;
             btnOp2.Text = this.preguntaRandom.opciones.ElementAt(1).descripcion;
@@ -60,74 +56,7 @@ namespace Presentacion.Formularios
             timer1.Enabled = true;
         }
 
-        private void btnResponderPregunta_Click(object sender, EventArgs e)
-        {
-            Boolean respuesta = false;
-            Respuesta laRespuesta = new Respuesta();
-            laRespuesta.usuario = this._usuario;
-            laRespuesta.pregunta = this.preguntaRandom;
-            timer1.Stop();
-
-            if (radOpcion1.Checked)
-            {
-                laRespuesta.opcion = this.preguntaRandom.opciones.ElementAt(0);
-
-                if (this.preguntaRandom.opciones.ElementAt(0).correcta == 1)
-                {
-                    respuesta = true;
-                }
-            }
-
-            if (radOpcion2.Checked)
-            {   
-                laRespuesta.opcion = this.preguntaRandom.opciones.ElementAt(1);
-
-                if(this.preguntaRandom.opciones.ElementAt(1).correcta == 1)
-                {
-                    respuesta = true;
-                }
-            }
-
-            if (radOpcion3.Checked)
-            {   
-                laRespuesta.opcion = this.preguntaRandom.opciones.ElementAt(2);
-
-                if(this.preguntaRandom.opciones.ElementAt(2).correcta == 1)
-                {
-                    respuesta = true;
-                }
-            }
-
-            if (radOpcion4.Checked)
-            {
-                laRespuesta.opcion = this.preguntaRandom.opciones.ElementAt(3);
-
-                if (this.preguntaRandom.opciones.ElementAt(3).correcta == 1)
-                {
-                    respuesta = true;
-                }
-            }
-
-            if (respuesta) {
-                MessageBox.Show("Es correcta");
-                laRespuesta.correcta = 1;
-                this._usuario.puntos = this._usuario.puntos + 10;
-                this._usuario.guardarPuntos();
-            } 
-            else
-            {
-                MessageBox.Show("Su respuesta es incorrecta");
-                laRespuesta.correcta = 0;
-            }
-            
-            //@TODO guardar la respuesta
-            laRespuesta.alta();
-            Resultado frmResultado = new Resultado(this._usuario, this.preguntaRandom);
-            frmResultado.MdiParent = this.MdiParent;
-            frmResultado.Show();
-            this.Hide();
-        }
-
+        
         private void timer1_Tick(object sender, EventArgs e)
         {
             if (this._tiempo > 0)
@@ -139,7 +68,6 @@ namespace Presentacion.Formularios
             {
                 timer1.Stop();
                 lblTiempo.Text = "Tiempo fuera";
-                btnResponderPregunta.Enabled = false;
                 MessageBox.Show("Se acabo el tiempo");
                 Resultado frmResultado = new Resultado(this._usuario, this.preguntaRandom);
                 frmResultado.MdiParent = this.MdiParent;

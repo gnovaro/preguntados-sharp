@@ -33,13 +33,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.lblCategoria = new System.Windows.Forms.Label();
             this.txtPregunta = new System.Windows.Forms.TextBox();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.radOpcion4 = new System.Windows.Forms.RadioButton();
-            this.radOpcion3 = new System.Windows.Forms.RadioButton();
-            this.radOpcion2 = new System.Windows.Forms.RadioButton();
-            this.radOpcion1 = new System.Windows.Forms.RadioButton();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.btnResponderPregunta = new System.Windows.Forms.Button();
             this.lblTiempo = new System.Windows.Forms.Label();
             this.btnOp1 = new System.Windows.Forms.Button();
             this.btnOp2 = new System.Windows.Forms.Button();
@@ -47,7 +41,6 @@
             this.btnOp4 = new System.Windows.Forms.Button();
             this.lblTimeLegend = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,53 +61,9 @@
             resources.ApplyResources(this.txtPregunta, "txtPregunta");
             this.txtPregunta.Name = "txtPregunta";
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.radOpcion4);
-            this.panel2.Controls.Add(this.radOpcion3);
-            this.panel2.Controls.Add(this.radOpcion2);
-            this.panel2.Controls.Add(this.radOpcion1);
-            resources.ApplyResources(this.panel2, "panel2");
-            this.panel2.Name = "panel2";
-            // 
-            // radOpcion4
-            // 
-            resources.ApplyResources(this.radOpcion4, "radOpcion4");
-            this.radOpcion4.Name = "radOpcion4";
-            this.radOpcion4.TabStop = true;
-            this.radOpcion4.UseVisualStyleBackColor = true;
-            // 
-            // radOpcion3
-            // 
-            resources.ApplyResources(this.radOpcion3, "radOpcion3");
-            this.radOpcion3.Name = "radOpcion3";
-            this.radOpcion3.TabStop = true;
-            this.radOpcion3.UseVisualStyleBackColor = true;
-            // 
-            // radOpcion2
-            // 
-            resources.ApplyResources(this.radOpcion2, "radOpcion2");
-            this.radOpcion2.Name = "radOpcion2";
-            this.radOpcion2.TabStop = true;
-            this.radOpcion2.UseVisualStyleBackColor = true;
-            // 
-            // radOpcion1
-            // 
-            resources.ApplyResources(this.radOpcion1, "radOpcion1");
-            this.radOpcion1.Name = "radOpcion1";
-            this.radOpcion1.TabStop = true;
-            this.radOpcion1.UseVisualStyleBackColor = true;
-            // 
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // btnResponderPregunta
-            // 
-            resources.ApplyResources(this.btnResponderPregunta, "btnResponderPregunta");
-            this.btnResponderPregunta.Name = "btnResponderPregunta";
-            this.btnResponderPregunta.UseVisualStyleBackColor = true;
-            this.btnResponderPregunta.Click += new System.EventHandler(this.btnResponderPregunta_Click);
             // 
             // lblTiempo
             // 
@@ -164,16 +113,12 @@
             this.Controls.Add(this.btnOp2);
             this.Controls.Add(this.btnOp1);
             this.Controls.Add(this.lblTiempo);
-            this.Controls.Add(this.btnResponderPregunta);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.txtPregunta);
             this.Controls.Add(this.panel1);
             this.Name = "JuegoFrm";
             this.Load += new System.EventHandler(this.Juego_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -183,13 +128,7 @@
 
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txtPregunta;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.RadioButton radOpcion4;
-        private System.Windows.Forms.RadioButton radOpcion3;
-        private System.Windows.Forms.RadioButton radOpcion2;
-        private System.Windows.Forms.RadioButton radOpcion1;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.Button btnResponderPregunta;
         private System.Windows.Forms.Label lblCategoria;
         private System.Windows.Forms.Label lblTiempo;
         private System.Windows.Forms.Button btnOp1;
