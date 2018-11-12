@@ -21,21 +21,22 @@ namespace Presentacion.Formularios
         {
             InitializeComponent();
             this._usuario = user;
+           
+        }
+        
+        private void PreguntaFrm_Load(object sender, EventArgs e)
+        {
+            this.ControlBox = false;
             Categoria objcategoria = new Categoria();
-            cmbCategoria.DataSource = objcategoria.listarCategorias(user.idioma.id);
+            cmbCategoria.DataSource = objcategoria.listarCategorias(this._usuario.idioma.id);
             cmbCategoria.DisplayMember = "nombre";
             cmbCategoria.ValueMember = "id";
             cmbCategoria.SelectedItem = null;
-
-        }
-        private void btnSalir_Click(object sender, EventArgs e)
-        {
-            Close();
         }
 
         private void btnCrearpregunta_Click(object sender, EventArgs e)
         {
-            //MessageBox.Show(cmbCategoria.SelectedValue.ToString());
+            
             Pregunta unapregunta = new Pregunta();
             Idioma unidioma = new Idioma();
             Categoria unacategoria = new Categoria();
@@ -123,6 +124,10 @@ namespace Presentacion.Formularios
                             }
 
                             MessageBox.Show("Los datos se han guardado correctamente");
+                            MenuPrincipal frmMenu = new MenuPrincipal(this._usuario);
+                            frmMenu.MdiParent = this.MdiParent;
+                            frmMenu.Show();
+                            this.Close();
                         }
                         else
                         {
@@ -157,9 +162,6 @@ namespace Presentacion.Formularios
             this.Close();
         }
 
-        private void PreguntaFrm_Load(object sender, EventArgs e)
-        {
-            this.ControlBox = false;
-        }
+        
     }
 }

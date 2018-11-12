@@ -144,7 +144,7 @@ namespace Presentacion.Formularios
                 Resultado frmResultado = new Resultado(this._usuario, this.preguntaRandom);
                 frmResultado.MdiParent = this.MdiParent;
                 frmResultado.Show();
-                this.Hide();
+                this.Close();
 
 
             }

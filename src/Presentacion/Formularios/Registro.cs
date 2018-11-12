@@ -51,7 +51,7 @@ namespace Presentacion.Formularios
                         MenuPrincipal frmMenu = new MenuPrincipal(this._usuario);
                         frmMenu.MdiParent = this.MdiParent;
                         frmMenu.Show();
-                        this.Hide();
+                        this.Close();
                     }
                     else 
                     {

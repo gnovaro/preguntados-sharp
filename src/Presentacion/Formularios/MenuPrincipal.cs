@@ -41,7 +41,7 @@ namespace Presentacion.Formularios
             JuegoFrm frmJuego = new JuegoFrm(this._usuario);
             frmJuego.MdiParent = this.MdiParent;
             frmJuego.Show();
-            this.Hide();
+            this.Close();
 
         }
 

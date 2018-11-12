@@ -39,7 +39,7 @@ namespace Presentacion.Formularios
                     MenuPrincipal frmMenu = new MenuPrincipal(this._usuario);
                     frmMenu.MdiParent = this.MdiParent;
                     frmMenu.Show();
-                    this.Hide();
+                    this.Close();
                 }
                 else 
                 {
@@ -58,7 +58,7 @@ namespace Presentacion.Formularios
             Registro frmRegistro = new Registro(this._usuario);
             frmRegistro.MdiParent = this.MdiParent;
             frmRegistro.Show();
-            this.Hide();
+            this.Close();
         }
 
         private void Login_Load(object sender, EventArgs e)
